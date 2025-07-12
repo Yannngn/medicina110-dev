@@ -31,15 +31,15 @@ const recentDonations = [
 
 const allGroup = [
   {
-    src: '/church-photo.jpg',
+    src: 'src/assets/church-photo.jpg',
     alt: 'Imagem da Turma na Igreja São Francisco'
   },
   {
-    src: '/hospital-photo.jpg',
+    src: 'src/assets/hospital-photo.jpg',
     alt: 'Imagem da Turna no Hospital Universitário Lauro Wanderley'
   },
   {
-    src: '/comissao.jpg',
+    src: 'src/assets/comissao.jpg',
     alt: 'Comissão'
   },
 ]
@@ -47,31 +47,31 @@ const allGroup = [
 const smallGroups = [
 
   {
-    src: '/grupo_1.jpg',
+    src: 'src/assets/grupo_1.jpg',
     alt: 'Grupo 1'
   },
   {
-    src: '/grupo_2.jpg',
+    src: 'src/assets/grupo_2.jpg',
     alt: 'Grupo 2'
   },
   {
-    src: '/grupo_3.jpg',
+    src: 'src/assets/grupo_3.jpg',
     alt: 'Grupo 3'
   },
   {
-    src: '/grupo_4.jpg',
+    src: 'src/assets/grupo_4.jpg',
     alt: 'Grupo 4'
   },
   {
-    src: '/grupo_5.jpg',
+    src: 'src/assets/grupo_5.jpg',
     alt: 'Grupo 5'
   },
   {
-    src: '/grupo_6.jpg',
+    src: 'src/assets/grupo_6.jpg',
     alt: 'Grupo 6'
   },
   {
-    src: '/grupo_7.jpg',
+    src: 'src/assets/grupo_7.jpg',
     alt: 'Grupo 7'
   }
 ]

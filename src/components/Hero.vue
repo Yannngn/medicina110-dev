@@ -4,7 +4,7 @@ defineEmits(['donate','doctors', 'donators']);
 
 <template>
     <div class="container section-component px-auto">
-        <img src="/brasao-image.png" alt="Brasão da Turma Medicina 110 UFPB"
+        <img src="../assets/brasao-image.png" alt="Brasão da Turma Medicina 110 UFPB"
             class="size-24 md:size-48 mx-auto mb-4 md:mb-8" />
         <h1 class="text-6xl md:text-8xl text-center py-4 font-fancy font-medium gold-gradient-text">
             Livro de Ouro

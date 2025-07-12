@@ -20,7 +20,7 @@ async function copyPixKey() {
         <div class="overflow-y-auto flex flex-col items-center justify-top no-scrollbar">
             <div class="size-64 md:size-96 my-4 md:my-8 relative group cursor-pointer border-2 border-transparent rounded-md hover:border-amber-300"
                 @click="copyPixKey">
-                <img src="/qr-pix.png" alt="QR Code para doação" class="rounded shadow-lg" />
+                <img src="../assets/qr-pix.png" alt="QR Code para doação" class="rounded shadow-lg" />
                 <div v-if="copied"
                     class="absolute inset-0 flex items-center justify-center backdrop-blur-sm backdrop-brightness-50 text-white text-lg font-semibold transition">
                     PIX copiado!
