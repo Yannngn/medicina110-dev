@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-
 // @ts-ignore
 import Vue3WordCloud from 'vue3-word-cloud' 
 
@@ -48,9 +47,4 @@ const colorFn = ([_text, weight]: [string, number]) => {
             </template>
         </Vue3WordCloud>
     </div>
-
 </template>
-
-<style>
-/* You can add global styles for the word cloud container if needed */
-</style>

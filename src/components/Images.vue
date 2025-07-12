@@ -1,26 +1,31 @@
 <script setup lang="ts">
-import 'vue3-carousel/carousel.css'
-import { Carousel, Slide } from 'vue3-carousel'
+// @ts-ignore
+import { Splide, SplideSlide } from '@splidejs/vue-splide'
+// @ts-ignore
+import '@splidejs/vue-splide/css'
+
 const props = defineProps<{
   pictures: { src: string; alt: string }[]
 }>()
+
+const options = {
+  type: 'loop',
+  drag: true,
+  perPage: 1,
+  rewind: true
+}
 </script>
 
 <template>
-  <Carousel :items-to-show="1" :wrap-around="true" :mouse-drag="true">
-    <Slide v-for="(pic, idx) in props.pictures" :key="pic.src + idx">
-      <div class="flex items-center justify-center">
+  <Splide :options="options" aria-label="Image Carousel">
+    <SplideSlide v-for="(pic, idx) in props.pictures" :key="pic.src + idx">
+      <div class="flex items-center justify-center h-full">
         <img :src="pic.src" :alt="pic.alt" class="max-h-[40vh] md:max-h-[50vh] w-auto" />
       </div>
-    </Slide>
-  </Carousel>
-
+    </SplideSlide>
+  </Splide>
 </template>
 
 <style scoped>
-.carousel__slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* Scoped styles can be added here if needed */
 </style>
