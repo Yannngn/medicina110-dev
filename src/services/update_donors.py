@@ -3,7 +3,6 @@ import json
 import pandas as pd
 from gspread_pandas import Spread
 from pandas.api.types import is_numeric_dtype
-from sklearn.preprocessing import MinMaxScaler
 
 # --- CONFIGURAÇÕES ---
 # Nome da planilha no Google Drive
@@ -43,9 +42,16 @@ def main():
 
         # --- 2. LIMPEZA E VALIDAÇÃO DOS DADOS ---
         # Garante que as colunas essenciais existem
-        required_cols = ["Timestamp", "Email Address", "Nome", "Envie o comprovante de pagamento (Imagem or PDF)"]
+        required_cols = [
+            "Timestamp",
+            "Email Address",
+            "Nome",
+            "Envie o comprovante de pagamento (Imagem or PDF)",
+        ]
         if not all(col in df.columns for col in required_cols):
-            raise ValueError("A planilha não contém as colunas necessárias: " + str(required_cols))
+            raise ValueError(
+                "A planilha não contém as colunas necessárias: " + str(required_cols)
+            )
 
         # Remove linhas onde o nome do doador ou o valor da doação estão vazios
         df.dropna(subset=required_cols, inplace=True)
@@ -56,7 +62,9 @@ def main():
 
         # Valida se a coluna é numérica após a conversão
         if not is_numeric_dtype(df["Valor pago"]):
-            raise TypeError("A coluna 'Valor pago' não pôde ser convertida para um tipo numérico.")
+            raise TypeError(
+                "A coluna 'Valor pago' não pôde ser convertida para um tipo numérico."
+            )
 
         # Remove linhas onde a conversão falhou (resultando em NaT)
         df.dropna(subset=["Valor pago"], inplace=True)
@@ -68,7 +76,9 @@ def main():
         print(f"Após limpeza e validação, restaram {len(df)} doações válidas.")
 
         if df.empty:
-            print("Nenhuma doação válida encontrada após a limpeza. Gerando arquivo JSON vazio.")
+            print(
+                "Nenhuma doação válida encontrada após a limpeza. Gerando arquivo JSON vazio."
+            )
             create_empty_json()
             return
 
@@ -79,16 +89,30 @@ def main():
 
         # --- 4. GERAÇÃO DAS LISTAS ---
         # Lista dos Maiores Doadores (baseado nos valores agregados)
-        top_donors_df: pd.DataFrame = aggregated_donors.nlargest(TOP_N_DONORS, "Valor pago")
-        top_donors_list = [{"name": row["Nome"], "amount": row["Valor pago"]} for index, row in top_donors_df.iterrows()]
+        top_donors_df: pd.DataFrame = aggregated_donors.nlargest(
+            TOP_N_DONORS, "Valor pago"
+        )
+        top_donors_list = [
+            {"name": row["Nome"], "amount": row["Valor pago"]}
+            for index, row in top_donors_df.iterrows()
+        ]
 
         # Lista dos Últimos Doadores (baseado no timestamp, pegando doadores únicos)
-        latest_donors_df: pd.DataFrame = df.sort_values(by="Timestamp", ascending=False).drop_duplicates(subset=["Nome"]).head(LATEST_N_DONORS)
-        latest_donors_list = [{"name": row["Nome"], "amount": row["Valor pago"]} for index, row in latest_donors_df.iterrows()]
+        latest_donors_df: pd.DataFrame = (
+            df.sort_values(by="Timestamp", ascending=False)
+            .drop_duplicates(subset=["Nome"])
+            .head(LATEST_N_DONORS)
+        )
+        latest_donors_list = [
+            {"name": row["Nome"], "amount": row["Valor pago"]}
+            for index, row in latest_donors_df.iterrows()
+        ]
 
         # --- 5. NORMALIZAÇÃO DE PESOS PARA A NUVEM DE PALAVRAS (TIERED) ---
         # Ordena doadores por valor pago (maior para menor)
-        sorted_donors = aggregated_donors.sort_values(by="Valor pago", ascending=False).reset_index(drop=True)
+        sorted_donors = aggregated_donors.sort_values(
+            by="Valor pago", ascending=False
+        ).reset_index(drop=True)
         weights = []
         for idx in range(len(sorted_donors)):
             if idx == 0:
@@ -116,7 +140,7 @@ def main():
             "latestDonations": latest_donors_list,
         }
 
-        with open('public/'+OUTPUT_JSON_PATH, "w", encoding="utf-8") as f:
+        with open("public/" + OUTPUT_JSON_PATH, "w", encoding="utf-8") as f:
             json.dump(final_json_data, f, ensure_ascii=False, indent=4)
 
         print(f"Arquivo '{OUTPUT_JSON_PATH}' gerado com sucesso.")
@@ -131,7 +155,7 @@ def main():
 def create_empty_json():
     """Cria um arquivo JSON vazio com a estrutura esperada pelo frontend."""
     empty_data = {"wordCloud": [], "topDonors": [], "latestDonations": []}
-    with open('src/assets/'+OUTPUT_JSON_PATH, "w", encoding="utf-8") as f:
+    with open("public/" + OUTPUT_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(empty_data, f, ensure_ascii=False, indent=4)
     print(f"Arquivo '{OUTPUT_JSON_PATH}' vazio foi criado como fallback.")
 

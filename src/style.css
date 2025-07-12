@@ -11,7 +11,7 @@
 :root {
   /* Palette: Light Theme */
   --color-bg: oklch(98.4% 0.003 247.858);
-  --color-bg-secondary: oklch(92.9% 0.013 255.508);
+  --color-bg-secondary: oklch(88% 0.013 255.508);
   --color-text: oklch(37.2% 0.044 257.287);
   --color-accent: #c59d5f;
   --color-accent-soft: #c59d5f88;

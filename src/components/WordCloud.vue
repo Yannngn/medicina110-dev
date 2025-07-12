@@ -1,28 +1,60 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 // @ts-ignore
 import Vue3WordCloud from 'vue3-word-cloud'
 
 // Theme-aware color lists using CSS variables
 const lightColors = [
     'var(--color-accent)',
-    '#94a3b8',           // slate-800
-    '#94a3b8',           // slate-600
-    '#cbd5e1',           // slate-500
-    '#e2e8f0',           // slate-400
+    'var(--color-slate-900)',
+    'var(--color-slate-700)',
+    'var(--color-slate-500)', 
+    'var(--color-slate-400)',
 ]
 
 const darkColors = [
     'var(--color-accent)',
-    '#94a3b8',           // slate-200
-    '#64748b',           // slate-300
-    '#475569',           // slate-400
-    '#334155',           // slate-500
+    'var(--color-slate-100)',
+    'var(--color-slate-300)', 
+    'var(--color-slate-500)',
+    'var(--color-slate-600)', 
 ]
 
+
+const theme = ref(document.documentElement.classList.contains('dark') ? 'dark' : 'light')
+
 function getThemeColors() {
-  return document.documentElement.classList.contains('dark') ? darkColors : lightColors
+    return theme.value === 'dark' ? darkColors : lightColors
 }
+
+function updateTheme() {
+    theme.value = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+}
+
+onMounted(() => {
+    window.addEventListener('transitionend', updateTheme)
+    window.addEventListener('animationend', updateTheme)
+    window.addEventListener('change', updateTheme)
+    window.addEventListener('themechange', updateTheme)
+    // Also listen for manual toggles
+    const observer = new MutationObserver(updateTheme)
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+    // Store observer for cleanup
+    WordCloudThemeObserver.value = observer
+})
+
+const WordCloudThemeObserver = ref<MutationObserver|null>(null)
+
+onUnmounted(() => {
+    window.removeEventListener('transitionend', updateTheme)
+    window.removeEventListener('animationend', updateTheme)
+    window.removeEventListener('change', updateTheme)
+    window.removeEventListener('themechange', updateTheme)
+    if (WordCloudThemeObserver.value) {
+        WordCloudThemeObserver.value.disconnect()
+        WordCloudThemeObserver.value = null
+    }
+})
 
 const props = defineProps<{
     words: { text: string; value: number }[]
@@ -50,10 +82,10 @@ const wordCloud = computed(() => {
 // }
 
 const colorFn = ([_, weight]: [string, number]) => {
-  // Directly map weight (1-5) to color index (0-4)
-  const colors = getThemeColors()
-  const idx = Math.max(0, Math.min(colors.length - 1, 5 - weight))
-  return colors[idx]
+    // Directly map weight (1-5) to color index (0-4)
+    const colors = getThemeColors()
+    const idx = Math.max(0, Math.min(colors.length - 1, 5 - weight))
+    return colors[idx]
 }
 
 const rotationFn = ([text, _weight]: [string, number]) => {

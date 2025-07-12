@@ -5,7 +5,7 @@ import DonorTable from './components/DonorTable.vue'
 import Hero from './components/Hero.vue'
 import Images from './components/Images.vue'
 import QRCode from './components/QRCode.vue'
-import MentiMeter from './components/MentiMeter.vue'
+import MentiMeter from './components/WordCloud.vue'
 import { fetchData, topDonors, latestDonations, wordCloud } from './services/data-service'
 
 // Data is now managed by data-service.ts
@@ -59,11 +59,15 @@ const smallGroups = [
 
 const sectionIds = ['hero', 'images', 'qrcode', 'tables', 'wordcloud']
 const activeSection = ref(0)
-const theme = ref('light')
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+const theme = ref(prefersDark ? 'dark' : 'light')
 
 let observers: IntersectionObserver[] = []
 
 onMounted(() => {
+  // Set initial theme based on user/system preference
+  document.documentElement.classList.toggle('dark', theme.value === 'dark')
+
   fetchData() // Fetch data when the component mounts
 
   sectionIds.forEach((id, idx) => {
@@ -105,7 +109,7 @@ function toggleTheme() {
 
 <template>
   <Background />
-  <button class="absolute top-2 right-2 z-50 p-1 rounded-full shadow-lg hover:scale-110 transition" @click="toggleTheme"
+  <button class="absolute top-2 right-2 z-50 p-2 rounded-full shadow-lg hover:scale-110 transition" @click="toggleTheme"
     :aria-label="theme === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro'" :style="{
       backgroundColor: 'var(--color-bg-secondary)',
       color: 'var(--color-text)',
@@ -121,7 +125,7 @@ function toggleTheme() {
           @cloud="scrollToSection(4)" />
       </section>
       <section id="images" class="snap-center">
-        <div class="container section-component rows-component gap-0">
+        <div class="container section-component rows-component">
           <Images :pictures="allGroup" />
           <Images :pictures="smallGroups" />
         </div>
@@ -130,7 +134,7 @@ function toggleTheme() {
         <QRCode />
       </section>
       <section id="tables" class="snap-center">
-        <div class="container section-component columns-component gap-8">
+        <div class="container section-component columns-component gap-4 md:gap-8">
           <DonorTable title="🏆 Maiores Doadores" :data="topDonors" />
           <DonorTable title="✨ Últimos Doadores" :data="latestDonations" />
         </div>

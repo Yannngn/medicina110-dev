@@ -7,7 +7,7 @@ defineEmits(['donate', 'doctors', 'donators', 'cloud']);
         <img src="../assets/brasao-image.png" alt="Brasão da Turma Medicina 110 UFPB"
             class="size-24 md:size-48 mx-auto mb-4 md:mb-8" />
         <h1
-            class="text-6xl md:text-8xl text-center py-4 font-fancy font-medium gold-gradient-text text-[var(--color-accent)]">
+            class="text-6xl md:text-8xl text-center p-4 md:p-8 font-fancy font-medium gold-gradient-text text-[var(--color-accent)]">
             Livro de Ouro
         </h1>
         <h2 class="text-xl md:text-2xl font-semibold text-center py-4 text-[var(--color-text)]">
