@@ -1,0 +1,82 @@
+{
+  "wordCloud": [
+    ["Empresa Alfa S.A.", 5],
+    ["Construtora Beta", 4],
+    ["Dr. Carlos Silva", 4],
+    ["Família Oliveira", 4],
+    ["Escritório de Advocacia Gama", 3],
+    ["Restaurante Sabor Divino", 3],
+    ["Ana Souza", 3],
+    ["Pedro Martins", 3],
+    ["Mariana Costa", 2],
+    ["Lucas Pereira", 2],
+    ["Juliana Santos", 2],
+    ["Loja Delta", 2],
+    ["Padaria Pão Quente", 1],
+    ["Oficina Mecânica Rocha", 1]
+  ],
+  "topDonors": [
+    {
+      "name": "Empresa Alfa S.A."
+    },
+    {
+      "name": "Construtora Beta"
+    },
+    {
+      "name": "Dr. Carlos Silva"
+    },
+    {
+      "name": "Família Oliveira"
+    },
+    {
+      "name": "Escritório de Advocacia Gama"
+    },
+    {
+      "name": "Restaurante Sabor Divino"
+    },
+    {
+      "name": "Ana Souza"
+    },
+    {
+      "name": "Pedro Martins"
+    },
+    {
+      "name": "Mariana Costa"
+    },
+    {
+      "name": "Lucas Pereira"
+    }
+  ],
+  "latestDonations": [
+    {
+      "name": "Oficina Mecânica Rocha"
+    },
+    {
+      "name": "Loja Delta"
+    },
+    {
+      "name": "Juliana Santos"
+    },
+    {
+      "name": "Pedro Martins"
+    },
+    {
+      "name": "Restaurante Sabor Divino"
+    },
+    {
+      "name": "Empresa Alfa S.A."
+    },
+    {
+      "name": "Mariana Costa"
+    },
+    {
+      "name": "Família Oliveira"
+    },
+    {
+      "name": "Lucas Pereira"
+    },
+    {
+      "name": "Dr. Carlos Silva"
+    }
+  ]
+}

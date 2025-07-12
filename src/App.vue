@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import Background from './components/Background.vue'
 import DonorTable from './components/DonorTable.vue'
@@ -7,39 +6,21 @@ import Hero from './components/Hero.vue'
 import Images from './components/Images.vue'
 import QRCode from './components/QRCode.vue'
 import MentiMeter from './components/MentiMeter.vue'
+import { fetchData, topDonors, latestDonations, wordCloud } from './services/data-service'
 
-// Example data for demonstration
-const topDonors = [
-  { name: 'Maria' },
-  { name: 'João' },
-  { name: 'Ana Paula' },
-  { name: 'Carlos Eduardo' },
-  { name: 'Fernanda Lima' },
-  { name: 'Ricardo Silva' },
-  { name: 'Patrícia Gomes' }
-]
-
-const recentDonations = [
-  { name: 'Lucas Souza' },
-  { name: 'Beatriz Costa' },
-  { name: 'Gabriel Rocha' },
-  { name: 'Juliana Alves' },
-  { name: 'Marcos Vinícius' },
-  { name: 'Larissa Mendes' },
-  { name: 'Felipe Oliveira' }
-]
+// Data is now managed by data-service.ts
 
 const allGroup = [
   {
-    src: '/church-photo.jpg',
+    src: '/medicina110-dev/church-photo.jpg',
     alt: 'Imagem da Turma na Igreja São Francisco'
   },
   {
-    src: '/hospital-photo.jpg',
+    src: '/medicina110-dev/hospital-photo.jpg',
     alt: 'Imagem da Turna no Hospital Universitário Lauro Wanderley'
   },
   {
-    src: '/comissao.jpg',
+    src: '/medicina110-dev/comissao.jpg',
     alt: 'Comissão'
   },
 ]
@@ -47,50 +28,44 @@ const allGroup = [
 const smallGroups = [
 
   {
-    src: '/grupo_1.jpg',
+    src: '/medicina110-dev/grupo_1.jpg',
     alt: 'Grupo 1'
   },
   {
-    src: '/grupo_2.jpg',
+    src: '/medicina110-dev/grupo_2.jpg',
     alt: 'Grupo 2'
   },
   {
-    src: '/grupo_3.jpg',
+    src: '/medicina110-dev/grupo_3.jpg',
     alt: 'Grupo 3'
   },
   {
-    src: '/grupo_4.jpg',
+    src: '/medicina110-dev/grupo_4.jpg',
     alt: 'Grupo 4'
   },
   {
-    src: '/grupo_5.jpg',
+    src: '/medicina110-dev/grupo_5.jpg',
     alt: 'Grupo 5'
   },
   {
-    src: '/grupo_6.jpg',
+    src: '/medicina110-dev/grupo_6.jpg',
     alt: 'Grupo 6'
   },
   {
-    src: '/grupo_7.jpg',
+    src: '/medicina110-dev/grupo_7.jpg',
     alt: 'Grupo 7'
   }
 ]
 
-const wordCloud = [
-  { text: 'Solidariedade', value: 100 },
-  { text: 'Comunidade', value: 80 },
-  { text: 'Esperança', value: 60 },
-  { text: 'Amor', value: 120 },
-  { text: 'Doação', value: 90 },
-  { text: 'Apoio', value: 70 }
-]
-
 const sectionIds = ['hero', 'images', 'qrcode', 'tables', 'wordcloud']
 const activeSection = ref(0)
+const theme = ref('light')
 
 let observers: IntersectionObserver[] = []
 
 onMounted(() => {
+  fetchData() // Fetch data when the component mounts
+
   sectionIds.forEach((id, idx) => {
     const el = document.getElementById(id)
     if (el) {
@@ -121,14 +96,29 @@ function scrollToSection(idx: number) {
     el.scrollIntoView({ behavior: 'smooth' })
   }
 }
+
+function toggleTheme() {
+  theme.value = theme.value === 'light' ? 'dark' : 'light'
+  document.documentElement.classList.toggle('dark', theme.value === 'dark')
+}
 </script>
 
 <template>
   <Background />
+  <button class="absolute top-2 right-2 z-50 p-1 rounded-full shadow-lg hover:scale-110 transition" @click="toggleTheme"
+    :aria-label="theme === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro'" :style="{
+      backgroundColor: 'var(--color-bg-secondary)',
+      color: 'var(--color-text)',
+      border: '1px solid var(--color-border)'
+    }">
+    <span v-if="theme === 'dark'">☀️</span>
+    <span v-else>🌙</span>
+  </button>
   <main class="overflow-y-auto snap-y snap-mandatory no-scrollbar">
     <div class="relative w-full h-screen">
       <section id="hero" class="snap-center">
-        <Hero @donate="scrollToSection(1)" @doctors="scrollToSection(2)" @donators="scrollToSection(3)" />
+        <Hero @doctors="scrollToSection(1)" @donate="scrollToSection(2)" @donators="scrollToSection(3)"
+          @cloud="scrollToSection(4)" />
       </section>
       <section id="images" class="snap-center">
         <div class="container section-component rows-component gap-0">
@@ -142,7 +132,7 @@ function scrollToSection(idx: number) {
       <section id="tables" class="snap-center">
         <div class="container section-component columns-component gap-8">
           <DonorTable title="🏆 Maiores Doadores" :data="topDonors" />
-          <DonorTable title="✨ Últimos Doadores" :data="recentDonations" />
+          <DonorTable title="✨ Últimos Doadores" :data="latestDonations" />
         </div>
       </section>
       <section id="wordcloud" class="snap-center">
@@ -153,15 +143,19 @@ function scrollToSection(idx: number) {
       <!-- Roller/Indicator -->
       <div class="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4 md:gap-8">
         <button v-for="(id, idx) in sectionIds" :key="id" @click="scrollToSection(idx)"
-          :aria-label="`Ir para seção ${id}`"
-          class="size-2 rounded-full border-2 border-slate-200 transition-all duration-200"
-          :class="activeSection === idx ? 'bg-slate-100 border-slate-800 scale-125 shadow-lg' : 'bg-slate-600'"></button>
+          :aria-label="`Ir para seção ${id}`" class="size-2 rounded-full transition-all duration-200" :style="{
+            backgroundColor: activeSection === idx ? 'var(--color-bg-secondary)' : 'var(--color-accent-soft)',
+            border: activeSection === idx ? '2px solid var(--color-border)' : '2px solid var(--color-border)',
+            boxShadow: activeSection === idx ? '0 0 16px 0 var(--color-accent-soft)' : 'none',
+            scale: activeSection === idx ? 1.25 : 1
+          }"></button>
       </div>
-      <footer class="relative w-full text-center text-sm text-slate-500 mb-8 md:mt-0 md:mb-0 md:bottom-16">
+      <footer class="relative w-full text-center text-sm mb-8 md:mt-0 md:mb-0 md:bottom-16"
+        style="color: var(--color-footer);">
         <p> Agradecimentos à Comissão de Formatura.</p>
         Criado por
-        <a href="https://github.com/Yannngn" target="_blank" rel="noopener"
-          class="underline hover:text-blue-600">@Yannngn</a>
+        <a href="https://github.com/Yannngn" target="_blank" rel="noopener" class="underline hover:text-blue-600"
+          style="color: var(--color-accent);">@Yannngn</a>
       </footer>
     </div>
   </main>
@@ -182,8 +176,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: radial-gradient(circle at center, rgba(48, 65, 88, 1) 25%, rgba(15, 23, 43,0.2) 100%); */
-  background: radial-gradient(circle at center, rgba(15, 23, 43, 1) 25%, rgba(15, 23, 43, 0.2) 100%);
+  background: var(--color-bg-gradient);
   border: 2rem;
   border-radius: 20px;
   transition: box-shadow 0.2s, border-color 0.2s;

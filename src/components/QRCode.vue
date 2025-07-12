@@ -18,7 +18,7 @@ async function copyPixKey() {
 <template>
     <div class="container section-component">
         <div class="overflow-y-auto flex flex-col items-center justify-top no-scrollbar">
-            <div class="size-64 md:size-96 my-4 md:my-8 relative group cursor-pointer border-2 border-transparent rounded-md hover:border-amber-300"
+            <div class="size-64 md:size-96 my-4 md:my-8 relative group cursor-pointer border-2 border-transparent rounded-md hover:border-[var(--color-bg-secondary)]"
                 @click="copyPixKey">
                 <img src="../assets/qr-pix.png" alt="QR Code para doação" class="rounded shadow-lg" />
                 <div v-if="copied"
@@ -32,27 +32,29 @@ async function copyPixKey() {
             </div>
             <div class="columns-component align-top gap-y-2 h-fit">
                 <div class="text-center">
-                    <h2 class="text-xl md:text-2xl font-bold">Dados Bancários</h2>
-                    <p class="">Banco: <span class="font-bold">000</span></p>
-                    <p class="">Agência: <span class="font-bold">0000-0</span></p>
-                    <p class="">Conta: <span class="font-bold">00000-0</span></p>
-                    <p class="">PIX: <span class="font-bold">{{ pixKey }}</span></p>
+                    <h2 class="text-xl md:text-2xl font-bold text-[var(--color-accent)]">Dados Bancários</h2>
+                    <p class="text-[var(--color-text)]">Banco: <span class="font-bold">000</span></p>
+                    <p class="text-[var(--color-text)]">Agência: <span class="font-bold">0000-0</span></p>
+                    <p class="text-[var(--color-text)]">Conta: <span class="font-bold">00000-0</span></p>
+                    <p class="text-[var(--color-text)]">PIX: <span class="font-bold">{{ pixKey }}</span></p>
                 </div>
                 <div class="text-center">
-                    <h2 class="text-xl md:text-2xl font-bold">Contato</h2>
-                    <p class="">WhatsApp: <span class="font-bold">(00) 00000-0000</span></p>
-                    <p class="">Email: <span class="font-bold">contato@exemplo.com</span></p>
+                    <h2 class="text-xl md:text-2xl font-bold text-[var(--color-accent)]">Contato</h2>
+                    <p class="text-[var(--color-text)]">WhatsApp: <span class="font-bold">(00) 00000-0000</span>
+                    </p>
+                    <p class="text-[var(--color-text)]">Email: <span class="font-bold">contato@exemplo.com</span>
+                    </p>
                 </div>
             </div>
-            <div class="text-center m-4 gap-y-2">
+            <div class="text-center mx-4">
                 <button href="https://forms.gle/seu-form-link" target="_blank" rel="noopener"
-                    class="p-4 rounded-lg shadow-md transition bg-slate-750">
+                    class="p-2 m-4 rounded-lg shadow-md transition bg-[var(--color-accent)] text-[var(--color-bg)]">
                     Preencher Google Forms
                 </button>
-                <p class="text-sm md:text-base">
+                <p class="text-sm md:text-base text-[var(--color-footer)]">
                     Ao fazer uma doação, preencha o formulário para que possamos registrar sua contribuição.
                 </p>
-                <p class="text-sm md:text-base">
+                <p class="text-sm md:text-base text-[var(--color-footer)]">
                     Se preferir, você pode copiar o PIX copia e cola clicando no QR Code acima ou copiando a chave PIX
                 </p>
             </div>

@@ -2,24 +2,52 @@
 @import url("https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap");
 @import "tailwindcss";
 
+
 @theme {
   --font-display: "Roboto", "Arial";
   --font-fancy: "WindSong", "Arial";
 }
 
 :root {
+  /* Palette: Light Theme */
+  --color-bg: oklch(98.4% 0.003 247.858);
+  --color-bg-secondary: oklch(92.9% 0.013 255.508);
+  --color-text: oklch(37.2% 0.044 257.287);
+  --color-accent: #c59d5f;
+  --color-accent-soft: #c59d5f88;
+  --color-border: #e2e8f0;
+  --color-footer: #64748b;
+  --color-bg-gradient: radial-gradient(circle at center, rgba(226, 232, 240, 1) 25%, rgba(226, 232, 240, 0.2) 100%);
+}
+
+.dark {
+  /* Palette: Dark Theme */
+  --color-bg: oklch(20.8% 0.042 265.755);
+  --color-bg-secondary: oklch(15% 0.04 265.755);
+  --color-text: oklch(92.9% 0.013 255.508);
+  --color-accent: #c59d5f;
+  --color-accent-soft: #c59d5f88;
+  --color-border: #334155;
+  --color-footer: #475569;
+  --color-bg-gradient: radial-gradient(circle at center, rgba(15, 23, 43, 1) 25%, rgba(15, 23, 43, 0.2) 100%);
+}
+
+:root {
   font-family: Roboto, WindSong, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: oklch(92.9% 0.013 255.508);
-  background-color: oklch(20.8% 0.042 265.755);
-
+  color: var(--color-text);
+  background-color: var(--color-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.dark {
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 button {
@@ -28,11 +56,13 @@ button {
   font-weight: 500;
   font-family: inherit;
   transition: border-color 0.25s;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
 }
 
 button:hover {
-  border-color: #c59d5f;
-  box-shadow: 0 0 32px 0 #c59d5f88;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 32px 0 var(--color-accent-soft);
 }
 
 #app {
@@ -41,22 +71,14 @@ button:hover {
   justify-content: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: oklch(37.2% 0.044 257.287);
-    background-color: oklch(98.4% 0.003 247.858);
-  }
-
-  button {
-    background-color: oklch(37.2% 0.044 257.287);
-  }
+footer {
+  color: var(--color-footer);
 }
 
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
-
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;

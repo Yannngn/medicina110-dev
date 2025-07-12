@@ -1,19 +1,19 @@
 {
-  "wordCloudData": [
-    ["Empresa Alfa S.A.", 90],
-    ["Construtora Beta", 85],
-    ["Dr. Carlos Silva", 65],
-    ["Família Oliveira", 60],
-    ["Escritório de Advocacia Gama", 58],
-    ["Restaurante Sabor Divino", 55],
-    ["Ana Souza", 30],
-    ["Pedro Martins", 28],
-    ["Mariana Costa", 25],
-    ["Lucas Pereira", 22],
-    ["Juliana Santos", 20],
-    ["Loja Delta", 18],
-    ["Padaria Pão Quente", 17],
-    ["Oficina Mecânica Rocha", 15]
+  "wordCloud": [
+    ["Empresa Alfa S.A.", 5],
+    ["Construtora Beta", 4],
+    ["Dr. Carlos Silva", 4],
+    ["Família Oliveira", 4],
+    ["Escritório de Advocacia Gama", 3],
+    ["Restaurante Sabor Divino", 3],
+    ["Ana Souza", 3],
+    ["Pedro Martins", 3],
+    ["Mariana Costa", 2],
+    ["Lucas Pereira", 2],
+    ["Juliana Santos", 2],
+    ["Loja Delta", 2],
+    ["Padaria Pão Quente", 1],
+    ["Oficina Mecânica Rocha", 1]
   ],
   "topDonors": [
     {
@@ -47,7 +47,7 @@
       "name": "Lucas Pereira"
     }
   ],
-  "latestDonors": [
+  "latestDonations": [
     {
       "name": "Oficina Mecânica Rocha"
     },
