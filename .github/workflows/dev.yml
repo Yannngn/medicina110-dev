@@ -13,14 +13,27 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "22"
       - name: Install dependencies
         run: npm ci
-      - name: Lint
+      - name: Lint JS/TS/Vue
         run: npm run lint
-      - name: Format
-        run: npm run format || true
       - name: Build
         run: npm run build
       - name: Run tests
         run: npm test || echo "No tests defined"
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13"
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas gspread gspread-pandas ruff
+      - name: Python Lint & Format (ruff)
+        run: |
+          ruff check src/services/
+          ruff format --check src/services/
+      - name: Python Test (if any)
+        run: |
+          pytest || echo "No Python tests defined"

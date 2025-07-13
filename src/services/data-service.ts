@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import { ref } from "vue";
 
 export interface Donor {
   name: string;
@@ -16,7 +16,7 @@ export const wordCloud = ref<WordCloudItem[]>([]);
 
 export async function fetchData() {
   try {
-    let response = await fetch("/medicina110-dev/donors.json");
+    const response = await fetch("/medicina110-dev/donors.json");
     const data = await response.json();
 
     topDonors.value = data.topDonors || [];

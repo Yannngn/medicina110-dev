@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap");
 @import "tailwindcss";
 
-
 @theme {
   --font-display: "Roboto", "Arial";
   --font-fancy: "WindSong", "Arial";
@@ -17,7 +16,11 @@
   --color-accent-soft: #c59d5f88;
   --color-border: #e2e8f0;
   --color-footer: #64748b;
-  --color-bg-gradient: radial-gradient(circle at center, rgba(226, 232, 240, 1) 25%, rgba(226, 232, 240, 0.2) 100%);
+  --color-bg-gradient: radial-gradient(
+    circle at center,
+    rgba(226, 232, 240, 1) 25%,
+    rgba(226, 232, 240, 0.2) 100%
+  );
 }
 
 .dark {
@@ -29,7 +32,11 @@
   --color-accent-soft: #c59d5f88;
   --color-border: #334155;
   --color-footer: #475569;
-  --color-bg-gradient: radial-gradient(circle at center, rgba(15, 23, 43, 1) 25%, rgba(15, 23, 43, 0.2) 100%);
+  --color-bg-gradient: radial-gradient(
+    circle at center,
+    rgba(15, 23, 43, 1) 25%,
+    rgba(15, 23, 43, 0.2) 100%
+  );
 }
 
 :root {

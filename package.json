@@ -8,7 +8,14 @@
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint src --ext .js,.ts,.vue",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,vue}": [
+      "npm run lint"
+    ]
   },
   "dependencies": {
     "@splidejs/vue-splide": "^0.6.12",
@@ -19,12 +26,20 @@
     "vue3-word-cloud": "^1.0.4"
   },
   "devDependencies": {
+    "@eslint/js": "^9.31.0",
     "@vitejs/plugin-vue": "^6.0.0",
     "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.31.0",
+    "eslint-plugin-vue": "^10.3.0",
     "gh-pages": "^6.3.0",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
     "sharp": "^0.34.3",
     "svgo": "^4.0.0",
     "typescript": "~5.8.3",
+    "typescript-eslint": "^8.36.0",
     "vite": "^7.0.3",
     "vite-plugin-image-optimizer": "^2.0.2",
     "vue-tsc": "^2.2.12"

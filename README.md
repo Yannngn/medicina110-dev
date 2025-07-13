@@ -1,4 +1,3 @@
-
 # Livro de Ouro - Medicina 110 UFPB
 
 [![Vite](https://img.shields.io/badge/Vite-4.x-646CFF?logo=vite)](https://vitejs.dev/)
@@ -8,7 +7,6 @@
 [![Python 3.13](https://img.shields.io/badge/Python-3.13-blue?logo=python)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-2.x-150458?logo=pandas)](https://pandas.pydata.org/)
 [![Google Sheets](https://img.shields.io/badge/Google%20Sheets-API-34A853?logo=google)](https://developers.google.com/sheets/api)
-
 
 ---
 
@@ -46,17 +44,19 @@ medicina110-dev/
 
 ### Como Rodar Localmente
 
-1. **Pré-requisitos:**  
-   - Node.js 18+  
-   - Python 3.13+  
+1. **Pré-requisitos:**
+   - Node.js 18+
+   - Python 3.13+
    - Conta Google com acesso à planilha de doações
 
 2. **Instale as dependências do frontend:**
+
    ```bash
    npm install
    ```
 
 3. **Execute o site em modo desenvolvimento:**
+
    ```bash
    npm run dev
    ```
@@ -83,7 +83,7 @@ medicina110-dev/
   Clique no botão "Faça sua doação", copie a chave PIX ou escaneie o QR Code.
 - **Como aparecer no Livro de Ouro:**  
   Após doar, preencha o formulário Google Forms para registrar seu nome.
-- **Visualize:**  
+- **Visualize:**
   - Maiores doadores
   - Últimos doadores
   - Nuvem de palavras dos doadores
