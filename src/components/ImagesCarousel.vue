@@ -31,5 +31,5 @@ const options = {
 </template>
 
 <style scoped>
-/* Scoped styles can be added here if needed */
+
 </style>

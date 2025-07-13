@@ -93,7 +93,7 @@ const colorFn = ([, weight]: [string, number]) => {
   return colors[idx];
 };
 
-const rotationFn = ([text, ]: [string, number]) => {
+const rotationFn = ([text,]: [string, number]) => {
   // Use a hash of the text to get a pseudo-random rotation in 0, 90, 180, or 270 degrees
   let hash = 0;
   for (let i = 0; i < text.length; i++) {
@@ -106,22 +106,18 @@ const rotationFn = ([text, ]: [string, number]) => {
 </script>
 
 <template>
-  <div
-    class="flex flex-wrap w-full h-164 md:h-128 p-4 items-center justify-center overflow-x-hidden"
-  >
-    <Vue3WordCloud
-      v-if="wordCloud.length > 0"
-      :words="wordCloud"
-      :color="colorFn"
-      :rotation="rotationFn"
-      rotation-unit="deg"
-      :spacing="1"
-      :draw-out-of-bound="false"
-      :shrink-to-fit="true"
-      shape="diamond"
-    />
-    <div v-else class="text-sm text-[var(--color-footer)]">
+  <!-- #TODO fix height, it should be dynamic based on screen size -->
+  <div class="flex flex-wrap w-full h-164 md:h-128 px-8">
+    <Vue3WordCloud v-if="wordCloud.length > 0" :words="wordCloud" :color="colorFn" :rotation="rotationFn"
+      rotation-unit="deg" :spacing="1" :draw-out-of-bound="false" :shrink-to-fit="true" shape="diamond" />
+    <div v-else class="md:text-xl text-[var(--color-footer)]">
       Carregando nuvem de palavras...
     </div>
   </div>
 </template>
+
+<style>
+.section-component {
+  justify-content: center;
+}
+</style>
