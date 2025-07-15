@@ -75,7 +75,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: medicina110ufpb/medicina110ufpb.github.io
-          token: ${{ secrets.PRODUCTION_ACCESS_TOKEN }}
+          token: ${{ secrets.DEV_PRODUCTION_ACCESS_TOKEN }}
           path: prod-repo
 
       - name: Copy updated donors.json to production checkout
