@@ -139,6 +139,8 @@ function toggleTheme() {
 </template>
 
 <style>
+
+
 section {
   height: 100vh;
   display: flex;
@@ -186,6 +188,12 @@ section {
   text-align: center;
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));
+}
+
+@media (max-height: 432px) {
+  footer {
+    display: none;
+  }
 }
 
 @media (min-height: 433px) and (min-width: 768px) {

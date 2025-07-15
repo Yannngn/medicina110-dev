@@ -6,9 +6,9 @@ from pandas.api.types import is_numeric_dtype
 
 # --- CONFIGURAÇÕES ---
 # Nome da planilha no Google Drive
-GOOGLE_SHEET_NAME = "Livro de Ouro - Doações"
+GOOGLE_SHEET_NAME = "Livro de Ouro - Turma de Medicina UFPB 110 (respostas)"
 # Nome da aba/worksheet dentro da planilha
-WORKSHEET_NAME = "Doações"
+WORKSHEET_NAME = "Respostas ao formulário 1"
 # Número de doadores para as listas de "maiores" e "últimos"
 TOP_N_DONORS = 10
 LATEST_N_DONORS = 10
@@ -43,10 +43,9 @@ def main():
         # --- 2. LIMPEZA E VALIDAÇÃO DOS DADOS ---
         # Garante que as colunas essenciais existem
         required_cols = [
-            "Timestamp",
-            "Email Address",
+            "Carimbo de data/hora",
             "Nome",
-            "Envie o comprovante de pagamento (Imagem or PDF)",
+            "Valor",
         ]
         if not all(col in df.columns for col in required_cols):
             raise ValueError(
@@ -57,21 +56,22 @@ def main():
         df.dropna(subset=required_cols, inplace=True)
         df: pd.DataFrame = df[df.str.strip() != ""]
 
-        # Converte 'Valor pago' para numérico, tratando erros
-        df["Valor pago"] = pd.to_numeric(df["Valor pago"], errors="coerce")
+        # Converte 'Valor' para numérico, tratando erros
+        df['Valor'] = df["Valor"].str.replace(",", '.')
+        df["Valor"] = pd.to_numeric(df["Valor"], errors="coerce")
 
         # Valida se a coluna é numérica após a conversão
-        if not is_numeric_dtype(df["Valor pago"]):
+        if not is_numeric_dtype(df["Valor"]):
             raise TypeError(
-                "A coluna 'Valor pago' não pôde ser convertida para um tipo numérico."
+                "A coluna 'Valor' não pôde ser convertida para um tipo numérico."
             )
 
         # Remove linhas onde a conversão falhou (resultando em NaT)
-        df.dropna(subset=["Valor pago"], inplace=True)
+        df.dropna(subset=["Valor"], inplace=True)
 
-        # Garante que 'Timestamp' seja do tipo datetime para ordenação
-        df["Timestamp"] = pd.to_datetime(df["Timestamp"], errors="coerce")
-        df.dropna(subset=["Timestamp"], inplace=True)
+        # Garante que 'Carimbo de data/hora' seja do tipo datetime para ordenação
+        df["Carimbo de data/hora"] = pd.to_datetime(df["Carimbo de data/hora"], errors="coerce")
+        df.dropna(subset=["Carimbo de data/hora"], inplace=True)
 
         print(f"Após limpeza e validação, restaram {len(df)} doações válidas.")
 
@@ -90,28 +90,28 @@ def main():
         # --- 4. GERAÇÃO DAS LISTAS ---
         # Lista dos Maiores Doadores (baseado nos valores agregados)
         top_donors_df: pd.DataFrame = aggregated_donors.nlargest(
-            TOP_N_DONORS, "Valor pago"
+            TOP_N_DONORS, "Valor"
         )
         top_donors_list = [
-            {"name": row["Nome"], "amount": row["Valor pago"]}
+            {"name": row["Nome"], "amount": row["Valor"]}
             for index, row in top_donors_df.iterrows()
         ]
 
-        # Lista dos Últimos Doadores (baseado no timestamp, pegando doadores únicos)
+        # Lista dos Últimos Doadores (baseado no Carimbo de data/hora, pegando doadores únicos)
         latest_donors_df: pd.DataFrame = (
-            df.sort_values(by="Timestamp", ascending=False)
+            df.sort_values(by="Carimbo de data/hora", ascending=False)
             .drop_duplicates(subset=["Nome"])
             .head(LATEST_N_DONORS)
         )
         latest_donors_list = [
-            {"name": row["Nome"], "amount": row["Valor pago"]}
+            {"name": row["Nome"], "amount": row["Valor"]}
             for index, row in latest_donors_df.iterrows()
         ]
 
         # --- 5. NORMALIZAÇÃO DE PESOS PARA A NUVEM DE PALAVRAS (TIERED) ---
-        # Ordena doadores por valor pago (maior para menor)
+        # Ordena doadores por Valor (maior para menor)
         sorted_donors = aggregated_donors.sort_values(
-            by="Valor pago", ascending=False
+            by="Valor", ascending=False
         ).reset_index(drop=True)
         weights = []
         for idx in range(len(sorted_donors)):
