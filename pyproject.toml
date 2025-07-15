@@ -1,7 +1,7 @@
 [project]
-name = "livro-de-ouro-vite"
+name = "livro-de-ouro-medicina-ufpb-110"
 version = "0.1.0"
-description = "Add your description here"
+description = "Livro de Ouro da Turma de Medicina UFPB 110. Feito por @Yannngn (Yann Nóbrega)"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

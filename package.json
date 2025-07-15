@@ -1,7 +1,7 @@
 {
-  "name": "livro-de-ouro-vite",
+  "name": "livro-de-ouro-medicina-ufpb-110",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
