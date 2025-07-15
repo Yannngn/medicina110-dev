@@ -1,5 +1,20 @@
 {
-    "wordCloud": [],
-    "topDonors": [],
-    "latestDonations": []
+    "wordCloud": [
+        {
+            "text": "Teste",
+            "value": 5
+        }
+    ],
+    "topDonors": [
+        {
+            "name": "Teste",
+            "amount": 10
+        }
+    ],
+    "latestDonations": [
+        {
+            "name": "Teste",
+            "amount": 10
+        }
+    ]
 }

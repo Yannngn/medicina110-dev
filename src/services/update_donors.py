@@ -31,19 +31,17 @@ def setup_gspread_credentials():
 
     # Parse the JSON credentials
     import json
+
     credentials_dict = json.loads(credentials_json)
 
     # Define the required scopes for Google Sheets and Drive
     scopes = [
         "https://www.googleapis.com/auth/spreadsheets.readonly",
-        "https://www.googleapis.com/auth/drive.readonly"
+        "https://www.googleapis.com/auth/drive.readonly",
     ]
 
     # Create credentials with proper scopes and authorize gspread client
-    credentials = Credentials.from_service_account_info(
-        credentials_dict, 
-        scopes=scopes
-    )
+    credentials = Credentials.from_service_account_info(credentials_dict, scopes=scopes)
     gc = gspread.authorize(credentials)
 
     print("Credenciais do Google configuradas com sucesso.")
@@ -131,7 +129,9 @@ def main():
         # Agrega doações pelo nome do doador para somar os valores totais
         # Remove a coluna 'Carimbo de data/hora' antes de agregar
         donors_no_timestamp = df.drop(columns=["Carimbo de data/hora"])
-        aggregated_donors: pd.DataFrame = donors_no_timestamp.groupby("Nome", as_index=False).sum()
+        aggregated_donors: pd.DataFrame = donors_no_timestamp.groupby(
+            "Nome", as_index=False
+        ).sum()
         print(f"Foram encontrados {len(aggregated_donors)} doadores únicos.")
 
         # --- 4. GERAÇÃO DAS LISTAS ---
