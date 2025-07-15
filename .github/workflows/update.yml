@@ -23,18 +23,42 @@ jobs:
         env:
           GSPREAD_PANDAS_CONFIG: ${{ secrets.GCP_SA_KEY }}
         run: python src/services/update_donors.py
-      - name: Commit donors.json
+      
+      - name: Commit donors.json to main branch
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add ${{ env.OUTPUT_JSON_PATH }}
+          git add public/donors.json
           # Only commit and push if there are changes in the file
           if git diff --staged --quiet; then
-            echo "No changes to commit."
+            echo "No changes to commit to main branch."
           else
-            git commit -m "[Google Bot] updating donations" -a
+            git commit -m "[Google Bot] updating donations in main branch"
             git push
           fi
-        env:
-          # Define o caminho do arquivo de saída como uma variável de ambiente para ser usada aqui
-          OUTPUT_JSON_PATH: 'public/donors.json'
+      
+      - name: Checkout production repo gh_pages branch
+        uses: actions/checkout@v4
+        with:
+          repository: medicina110ufpb/medicina110ufpb.github.io
+          ref: gh_pages
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: prod-repo
+      
+      - name: Copy donors.json to production repo root
+        run: |
+          cp public/donors.json prod-repo/donors.json
+      
+      - name: Commit and push to gh_pages branch
+        run: |
+          cd prod-repo
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add donors.json
+          # Only commit and push if there are changes in the file
+          if git diff --staged --quiet; then
+            echo "No changes to commit to gh_pages branch."
+          else
+            git commit -m "[Google Bot] updating donations in gh_pages"
+            git push
+          fi
