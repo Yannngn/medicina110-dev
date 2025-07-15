@@ -1,8 +1,9 @@
 import json
 import os
 
+import gspread
 import pandas as pd
-from gspread_pandas import Spread
+from google.oauth2.service_account import Credentials
 from pandas.api.types import is_numeric_dtype
 
 # --- CONFIGURAÇÕES ---
@@ -22,20 +23,22 @@ OUTPUT_JSON_PATH = "donors.json"
 def setup_gspread_credentials():
     """
     Configura as credenciais do Google Sheets a partir da variável de ambiente.
+    Retorna o cliente gspread autenticado.
     """
     credentials_json = os.getenv("GSPREAD_PANDAS_CONFIG")
     if not credentials_json:
         raise ValueError("GSPREAD_PANDAS_CONFIG environment variable not found")
 
-    # Cria um arquivo temporário com as credenciais
-    config_dir = os.path.expanduser("~/.config/gspread_pandas")
-    os.makedirs(config_dir, exist_ok=True)
-
-    config_file = os.path.join(config_dir, "google_secret.json")
-    with open(config_file, "w") as f:
-        f.write(credentials_json)
-
+    # Parse the JSON credentials
+    import json
+    credentials_dict = json.loads(credentials_json)
+    
+    # Create credentials and authorize gspread client
+    credentials = Credentials.from_service_account_info(credentials_dict)
+    gc = gspread.authorize(credentials)
+    
     print("Credenciais do Google configuradas com sucesso.")
+    return gc
 
 
 def main():
@@ -47,15 +50,19 @@ def main():
 
     try:
         # --- 0. CONFIGURAÇÃO DAS CREDENCIAIS ---
-        setup_gspread_credentials()
+        gc = setup_gspread_credentials()
 
         # --- 1. AUTENTICAÇÃO E BUSCA DE DADOS ---
-        # gspread-pandas usa as credenciais do arquivo de configuração
+        # Abre a planilha e acessa a worksheet específica
         print(f"Acessando a planilha: '{GOOGLE_SHEET_NAME}'")
-        spread = Spread(GOOGLE_SHEET_NAME)
-
-        # Converte a worksheet para um DataFrame do Pandas
-        df = spread.sheet_to_df(index=0, sheet=WORKSHEET_NAME)
+        spreadsheet = gc.open(GOOGLE_SHEET_NAME)
+        worksheet = spreadsheet.worksheet(WORKSHEET_NAME)
+        
+        # Obtém todos os dados como lista de dicionários
+        records = worksheet.get_all_records()
+        
+        # Converte para DataFrame do Pandas
+        df = pd.DataFrame(records)
         print(f"Foram encontradas {len(df)} linhas na planilha.")
 
         if df.empty:
