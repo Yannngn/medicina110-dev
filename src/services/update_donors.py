@@ -138,7 +138,9 @@ def main():
         # Lista dos Maiores Doadores (baseado nos valores agregados)
         top_donors_df: pd.DataFrame = aggregated_donors.nlargest(TOP_N_DONORS, "Valor")
         top_donors_list = [
-            {"name": row["Nome"], "amount": row["Valor"]}
+            {
+                "name": row["Nome"],
+            }  # "amount": row["Valor"]}
             for index, row in top_donors_df.iterrows()
         ]
 
@@ -149,7 +151,9 @@ def main():
             .head(LATEST_N_DONORS)
         )
         latest_donors_list = [
-            {"name": row["Nome"], "amount": row["Valor"]}
+            {
+                "name": row["Nome"],
+            }  # "amount": row["Valor"]}
             for index, row in latest_donors_df.iterrows()
         ]
 

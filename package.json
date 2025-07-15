@@ -5,18 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "npm run build:dev",
     "build:dev": "vue-tsc -b && vite build --mode development",
     "build:prod": "vue-tsc -b && vite build --mode production",
     "preview": "vite preview",
-    "deploy": "npm run build:dev && gh-pages -d dist",
+    "lint": "eslint . --ext .js,.ts,.vue",
+    "lint:fix": "eslint . --ext .js,.ts,.vue --fix",
+    "deploy": "npm run build && gh-pages -d dist",
     "deploy:prod": "npm run build:prod && gh-pages -d dist -r https://github.com/medicina110ufpb/medicina110ufpb.github.io.git",
-    "deploy:both": "npm run deploy && npm run deploy:prod",
-    "lint": "eslint src --ext .js,.ts,.vue",
-    "prepare": "husky"
+    "deploy:both": "npm run deploy && npm run deploy:prod"
   },
   "lint-staged": {
-    "src/**/*.{js,ts,vue}": [
+    "*.{js,ts,vue}": [
       "npm run lint"
     ]
   },
