@@ -31,12 +31,13 @@ def setup_gspread_credentials():
 
     # Parse the JSON credentials
     import json
+
     credentials_dict = json.loads(credentials_json)
-    
+
     # Create credentials and authorize gspread client
     credentials = Credentials.from_service_account_info(credentials_dict)
     gc = gspread.authorize(credentials)
-    
+
     print("Credenciais do Google configuradas com sucesso.")
     return gc
 
@@ -57,10 +58,10 @@ def main():
         print(f"Acessando a planilha: '{GOOGLE_SHEET_NAME}'")
         spreadsheet = gc.open(GOOGLE_SHEET_NAME)
         worksheet = spreadsheet.worksheet(WORKSHEET_NAME)
-        
+
         # Obtém todos os dados como lista de dicionários
         records = worksheet.get_all_records()
-        
+
         # Converte para DataFrame do Pandas
         df = pd.DataFrame(records)
         print(f"Foram encontradas {len(df)} linhas na planilha.")
