@@ -1,4 +1,5 @@
 import json
+import os
 
 import pandas as pd
 from gspread_pandas import Spread
@@ -18,6 +19,25 @@ FONT_SIZE_RANGE = (12, 64)
 OUTPUT_JSON_PATH = "donors.json"
 
 
+def setup_gspread_credentials():
+    """
+    Configura as credenciais do Google Sheets a partir da variável de ambiente.
+    """
+    credentials_json = os.getenv("GSPREAD_PANDAS_CONFIG")
+    if not credentials_json:
+        raise ValueError("GSPREAD_PANDAS_CONFIG environment variable not found")
+
+    # Cria um arquivo temporário com as credenciais
+    config_dir = os.path.expanduser("~/.config/gspread_pandas")
+    os.makedirs(config_dir, exist_ok=True)
+
+    config_file = os.path.join(config_dir, "google_secret.json")
+    with open(config_file, "w") as f:
+        f.write(credentials_json)
+
+    print("Credenciais do Google configuradas com sucesso.")
+
+
 def main():
     """
     Função principal que orquestra o processo de busca, processamento
@@ -26,8 +46,11 @@ def main():
     print("Iniciando o processo de atualização de dados dos doadores...")
 
     try:
+        # --- 0. CONFIGURAÇÃO DAS CREDENCIAIS ---
+        setup_gspread_credentials()
+
         # --- 1. AUTENTICAÇÃO E BUSCA DE DADOS ---
-        # gspread-pandas usa as credenciais do ambiente, que serão fornecidas pelo GitHub Actions
+        # gspread-pandas usa as credenciais do arquivo de configuração
         print(f"Acessando a planilha: '{GOOGLE_SHEET_NAME}'")
         spread = Spread(GOOGLE_SHEET_NAME)
 
@@ -54,7 +77,11 @@ def main():
 
         # Remove linhas onde o nome do doador ou o valor da doação estão vazios
         df.dropna(subset=required_cols, inplace=True)
-        df: pd.DataFrame = df[df.str.strip() != ""]
+
+        # Remove linhas onde os campos de texto estão vazios (apenas espaços em branco)
+        for col in ["Nome"]:
+            if col in df.columns and df[col].dtype == "object":
+                df = df[df[col].astype(str).str.strip() != ""]
 
         # Converte 'Valor' para numérico, tratando erros
         df["Valor"] = df["Valor"].str.replace(",", ".")
