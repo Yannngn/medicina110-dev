@@ -9,7 +9,7 @@
     "build:dev": "vue-tsc -b && vite build --mode development",
     "build:prod": "vue-tsc -b && vite build --mode production",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
+    "deploy": "npm run build:dev && gh-pages -d dist",
     "deploy:prod": "npm run build:prod && gh-pages -d dist -r https://github.com/medicina110ufpb/medicina110ufpb.github.io.git",
     "deploy:both": "npm run deploy && npm run deploy:prod",
     "lint": "eslint src --ext .js,.ts,.vue",
