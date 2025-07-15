@@ -16,7 +16,8 @@ export const wordCloud = ref<WordCloudItem[]>([]);
 
 export async function fetchData() {
   try {
-    const response = await fetch("/medicina110-dev/donors.json");
+    const basePath = import.meta.env.BASE_URL;
+    const response = await fetch(`${basePath}donors.json`);
     const data = await response.json();
 
     topDonors.value = data.topDonors || [];

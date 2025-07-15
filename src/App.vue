@@ -18,48 +18,51 @@ import {
 
 // Data is now managed by data-service.ts
 
+// Get the base path from the meta tag injected by Vite
+const basePath = import.meta.env.BASE_URL;
+
 const allGroup = [
   {
-    src: "/medicina110-dev/church-photo.jpg",
+    src: `${basePath}church-photo.jpg`,
     alt: "Imagem da Turma na Igreja São Francisco",
   },
   {
-    src: "/medicina110-dev/hospital-photo.jpg",
+    src: `${basePath}hospital-photo.jpg`,
     alt: "Imagem da Turna no Hospital Universitário Lauro Wanderley",
   },
   {
-    src: "/medicina110-dev/comissao.jpg",
+    src: `${basePath}comissao.jpg`,
     alt: "Comissão",
   },
 ];
 
 const smallGroups = [
   {
-    src: "/medicina110-dev/grupo_1.jpg",
+    src: `${basePath}grupo_1.jpg`,
     alt: "Grupo 1",
   },
   {
-    src: "/medicina110-dev/grupo_2.jpg",
+    src: `${basePath}grupo_2.jpg`,
     alt: "Grupo 2",
   },
   {
-    src: "/medicina110-dev/grupo_3.jpg",
+    src: `${basePath}grupo_3.jpg`,
     alt: "Grupo 3",
   },
   {
-    src: "/medicina110-dev/grupo_4.jpg",
+    src: `${basePath}grupo_4.jpg`,
     alt: "Grupo 4",
   },
   {
-    src: "/medicina110-dev/grupo_5.jpg",
+    src: `${basePath}grupo_5.jpg`,
     alt: "Grupo 5",
   },
   {
-    src: "/medicina110-dev/grupo_6.jpg",
+    src: `${basePath}grupo_6.jpg`,
     alt: "Grupo 6",
   },
   {
-    src: "/medicina110-dev/grupo_7.jpg",
+    src: `${basePath}grupo_7.jpg`,
     alt: "Grupo 7",
   },
 ];
