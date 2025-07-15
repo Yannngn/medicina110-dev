@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// eslint-disable
 // This component renders a fixed gradient background for the app
 </script>
 

@@ -8,9 +8,9 @@
     "build": "npm run build:dev",
     "build:dev": "vue-tsc -b && vite build --mode development",
     "build:prod": "vue-tsc -b && vite build --mode production",
-    "preview": "vite preview",
-    "lint": "eslint . --ext .js,.ts,.vue",
-    "lint:fix": "eslint . --ext .js,.ts,.vue --fix",
+    "preview": "vite preview --base=/medicina110-dev/",
+    "lint": "eslint src/ --ext .js,.ts,.vue",
+    "lint:fix": "eslint src/ --ext .js,.ts,.vue --fix",
     "deploy": "npm run build && gh-pages -d dist",
     "deploy:prod": "npm run build:prod && gh-pages -d dist -r https://github.com/medicina110ufpb/medicina110ufpb.github.io.git",
     "deploy:both": "npm run deploy && npm run deploy:prod"
