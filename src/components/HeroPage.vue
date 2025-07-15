@@ -5,43 +5,27 @@ defineEmits(["donate", "doctors", "donators", "cloud"]);
 </script>
 
 <template>
-  <div class="container section-component">
-    <div class="flex flex-col justify-center items-center gap-4 md:gap-8">
-      <img src="../assets/brasao-image.png" alt="Brasão da Turma Medicina 110 UFPB"
-        class="size-36 md:size-72 mx-auto" />
-      <h1
-        class="px-8 text-center text-6xl md:text-8xl font-fancy font-medium gold-gradient-text text-[var(--color-accent)]">
+  <section id="hero" class="snap-center">
+    <div class="container section-component gap-4 md:gap-8">
+      <img src="../assets/brasao-image.png" alt="Brasão da Turma Medicina 110 UFPB" class="resizeble-image" />
+      <h1 class="px-8 section-h1 font-fancy font-medium gold-gradient-text text-[var(--color-accent)]">
         Livro de Ouro
       </h1>
-      <h2 class="px-8 text-center text-xl md:text-4xl font-semibold text-[var(--color-text)]">
+      <h2 class="px-8 section-h2 font-semibold text-[var(--color-text)]">
         Turma Medicina 110 UFPB
       </h2>
-      <p class="px-8 md:px-16 text-center text-base md:text-xl text-[var(--color-footer)]">
+      <p class="px-8 md:px-16 section-p text-[var(--color-footer)]">
         Este é o nosso Livro de Ouro digital! Contribua com a nossa formatura e
         tenha seu nome eternizado em nossa página.
       </p>
     </div>
-  </div>
-
+  </section>
 </template>
 
 <style scoped>
-/* Transição do menu drop-up */
-.dropup-menu-enter-active,
-.dropup-menu-leave-active {
-  transition: all 0.3s ease;
-}
-
-.dropup-menu-enter-from,
-.dropup-menu-leave-to {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
-.dropup-menu-enter-to,
-.dropup-menu-leave-from {
-  opacity: 1;
-  transform: translateY(0);
+.resizeble-image {
+  width: max(8rem, 16vh);
+  aspect-ratio: 1 / 1;
 }
 
 .gold-gradient-text {

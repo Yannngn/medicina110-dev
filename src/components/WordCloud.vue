@@ -106,18 +106,24 @@ const rotationFn = ([text,]: [string, number]) => {
 </script>
 
 <template>
-  <!-- #TODO fix height, it should be dynamic based on screen size -->
-  <div class="flex flex-wrap w-full h-164 md:h-128 px-8">
-    <Vue3WordCloud v-if="wordCloud.length > 0" :words="wordCloud" :color="colorFn" :rotation="rotationFn"
-      rotation-unit="deg" :spacing="1" :draw-out-of-bound="false" :shrink-to-fit="true" shape="diamond" />
-    <div v-else class="md:text-xl text-[var(--color-footer)]">
-      Carregando nuvem de palavras...
+  <section id="wordcloud" class="snap-center">
+
+    <!-- #TODO fix height, it should be dynamic based on screen size -->
+    <div class="container section-component justify-center items-center">
+      <div class="word-cloud">
+        <Vue3WordCloud v-if="wordCloud.length > 0" :words="wordCloud" :color="colorFn" :rotation="rotationFn"
+          rotation-unit="deg" :spacing="1" :draw-out-of-bound="false" :shrink-to-fit="true" shape="diamond" />
+        <div v-else class="md:text-xl text-[var(--color-footer)]">
+          Carregando nuvem de palavras...
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<style>
-.section-component {
-  justify-content: center;
+<style scoped>
+.word-cloud {
+  width: 80vw;
+  height: 80vh;
 }
 </style>

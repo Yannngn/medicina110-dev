@@ -23,7 +23,7 @@ const options = {
         <img
           :src="pic.src"
           :alt="pic.alt"
-          class="max-h-[40vh] md:max-h-[50vh] w-auto"
+          class="max-h-[50vh] w-auto"
         />
       </div>
     </SplideSlide>
