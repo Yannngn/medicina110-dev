@@ -21,6 +21,10 @@
             "value": 3
         },
         {
+            "text": "MD",
+            "value": 3
+        },
+        {
             "text": "Teste",
             "value": 3
         }
@@ -42,10 +46,16 @@
             "name": "Teste maior"
         },
         {
+            "name": "MD"
+        },
+        {
             "name": "Teste"
         }
     ],
     "latestDonations": [
+        {
+            "name": "MD"
+        },
         {
             "name": "Yann"
         },
