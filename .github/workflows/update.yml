@@ -91,3 +91,4 @@ jobs:
           commit_author: "GitHub Actions Bot <github-actions[bot]@users.noreply.github.com>"
           repository: ./prod-repo
           branch: gh-pages
+          push_options: '--force'
