@@ -77,11 +77,12 @@ jobs:
           repository: medicina110ufpb/medicina110ufpb.github.io
           token: ${{ secrets.DEV_PRODUCTION_ACCESS_TOKEN }}
           path: prod-repo
-
+          ref: gh-pages
+          
       - name: Copy updated donors.json to production repo root
         run: cp public/donors.json prod-repo/donors.json
 
-      - name: Commit and push to production repo main
+      - name: Commit and push to production repo gh-pages
         uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "chore: Update form response data"
