@@ -57,7 +57,7 @@ def main():
         df: pd.DataFrame = df[df.str.strip() != ""]
 
         # Converte 'Valor' para numérico, tratando erros
-        df['Valor'] = df["Valor"].str.replace(",", '.')
+        df["Valor"] = df["Valor"].str.replace(",", ".")
         df["Valor"] = pd.to_numeric(df["Valor"], errors="coerce")
 
         # Valida se a coluna é numérica após a conversão
@@ -70,7 +70,9 @@ def main():
         df.dropna(subset=["Valor"], inplace=True)
 
         # Garante que 'Carimbo de data/hora' seja do tipo datetime para ordenação
-        df["Carimbo de data/hora"] = pd.to_datetime(df["Carimbo de data/hora"], errors="coerce")
+        df["Carimbo de data/hora"] = pd.to_datetime(
+            df["Carimbo de data/hora"], errors="coerce"
+        )
         df.dropna(subset=["Carimbo de data/hora"], inplace=True)
 
         print(f"Após limpeza e validação, restaram {len(df)} doações válidas.")
@@ -89,9 +91,7 @@ def main():
 
         # --- 4. GERAÇÃO DAS LISTAS ---
         # Lista dos Maiores Doadores (baseado nos valores agregados)
-        top_donors_df: pd.DataFrame = aggregated_donors.nlargest(
-            TOP_N_DONORS, "Valor"
-        )
+        top_donors_df: pd.DataFrame = aggregated_donors.nlargest(TOP_N_DONORS, "Valor")
         top_donors_list = [
             {"name": row["Nome"], "amount": row["Valor"]}
             for index, row in top_donors_df.iterrows()
