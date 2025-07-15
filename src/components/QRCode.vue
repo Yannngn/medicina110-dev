@@ -1,14 +1,81 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const pixKey = "seu-pix@exemplo.com"; // Altere para sua chave PIX real
+const pixCopy = "Esse é um pix copia e cola"; // Altere para sua chave PIX real
+const pixKey = "medicina110ufpb@gmail.com"; // Altere para sua chave PIX real
 const copied = ref(false);
+const emailCopied = ref(false);
+const pixKeyCopied = ref(false);
 
 async function copyPixKey() {
   try {
-    await navigator.clipboard.writeText(pixKey);
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(pixCopy);
+    } else {
+      // Fallback para HTTP/browsers mais antigos
+      const textArea = document.createElement('textarea');
+      textArea.value = pixCopy;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+    }
     copied.value = true;
     setTimeout(() => (copied.value = false), 2000);
+  } catch (e) {
+    alert("Não foi possível copiar a chave PIX.");
+    console.error("Erro ao copiar a chave PIX:", e);
+  }
+}
+
+async function copyEmail() {
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(pixKey);
+    } else {
+      // Fallback para HTTP/browsers mais antigos
+      const textArea = document.createElement('textarea');
+      textArea.value = pixKey;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+    }
+    emailCopied.value = true;
+    setTimeout(() => (emailCopied.value = false), 2000);
+  } catch (e) {
+    alert("Não foi possível copiar o email.");
+    console.error("Erro ao copiar o email:", e);
+  }
+}
+
+async function copyPixKeyOnly() {
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(pixKey);
+    } else {
+      // Fallback para HTTP/browsers mais antigos
+      const textArea = document.createElement('textarea');
+      textArea.value = pixKey;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+    }
+    pixKeyCopied.value = true;
+    setTimeout(() => (pixKeyCopied.value = false), 2000);
   } catch (e) {
     alert("Não foi possível copiar a chave PIX.");
     console.error("Erro ao copiar a chave PIX:", e);
@@ -35,7 +102,7 @@ async function copyPixKey() {
       </div>
       <div class="columns-component pt-2 gap-y-2 h-fit">
         <div class="text-center">
-          <h2 class="section-h2 font-bold text-[var(--color-accent)]">
+          <h2 class="section-h2 font-bold text-[var(--color-accent)] md:mb-2">
             Dados Bancários
           </h2>
           <p class="section-p text-[var(--color-text)]">
@@ -48,26 +115,41 @@ async function copyPixKey() {
             Conta: <span class="font-semibold">00000-0</span>
           </p>
           <p class="section-p text-[var(--color-text)]">
-            PIX: <span class="font-semibold">{{ pixKey }}</span>
+            PIX: <span class="font-semibold cursor-pointer hover:text-[var(--color-accent)] transition-colors relative"
+              @click="copyPixKeyOnly" title="Clique para copiar a chave PIX">
+              {{ pixKey }}
+              <span v-if="pixKeyCopied"
+                class="absolute -top-8 left-1/2 -translate-x-1/2 bg-[var(--color-accent)] text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+                Chave PIX copiada!
+              </span>
+            </span>
           </p>
         </div>
         <div class="text-center">
-          <h2 class="section-h2 font-bold text-[var(--color-accent)]">
+          <h2 class="section-h2 font-bold text-[var(--color-accent)] md:mb-2">
             Contato
           </h2>
           <p class="section-p text-[var(--color-text)]">
             WhatsApp: <span class="font-semibold">(00) 00000-0000</span>
           </p>
           <p class="section-p text-[var(--color-text)]">
-            Email: <span class="font-semibold">contato@exemplo.com</span>
+            Email:
+            <span class="font-semibold cursor-pointer hover:text-[var(--color-accent)] transition-colors relative"
+              @click="copyEmail" title="Clique para copiar o email">
+              {{ pixKey }}
+              <span v-if="emailCopied"
+                class="absolute -top-8 left-1/2 -translate-x-1/2 bg-[var(--color-accent)] text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+                Email copiado!
+              </span>
+            </span>
           </p>
         </div>
       </div>
       <div class="text-center mb-8 md:mb-0 ">
-        <button href="https://forms.gle/seu-form-link" target="_blank" rel="noopener"
-          class="section-p m-2 md:m-4 p-2 md:p-4 rounded-lg md:rounded-xl shadow-md transition bg-[var(--color-accent)] text-[var(--color-bg)]">
+        <a href="https://forms.gle/HLQgGe3gsJLUv4hcA" target="_blank" rel="noopener"
+          class="btn m-2 md:m-4 p-2 md:p-4 rounded-lg md:rounded-xl inline-block">
           Preencher Google Forms
-        </button>
+        </a>
       </div>
       <div class="hidden-block">
         <p class="section-p text-[var(--color-footer)]">

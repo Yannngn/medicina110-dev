@@ -57,7 +57,7 @@
   background-color: var(--color-bg);
 }
 
-button {
+button, a.btn{
   border: 1px solid transparent;
   font-size: 1em;
   font-weight: 500;
@@ -67,7 +67,7 @@ button {
   color: var(--color-text);
 }
 
-button:hover {
+button:hover, a.btn:hover{
   border-color: var(--color-accent);
   box-shadow: 0 0 32px 0 var(--color-accent-soft);
 }
