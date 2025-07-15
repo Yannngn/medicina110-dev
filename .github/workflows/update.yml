@@ -54,7 +54,7 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Copy updated donors.json to gh-pages checkout
+      - name: Copy updated donors.json to gh-pages root
         run: cp public/donors.json gh-pages/donors.json
 
       - name: Commit and push to dev gh-pages
@@ -65,7 +65,7 @@ jobs:
           commit_user_name: "GitHub Actions Bot"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
           commit_author: "GitHub Actions Bot <github-actions[bot]@users.noreply.github.com>"
-          repository: .
+          repository: ./gh-pages
           branch: gh-pages
           push_options: '--force'
           skip_dirty_check: false
@@ -78,10 +78,10 @@ jobs:
           token: ${{ secrets.DEV_PRODUCTION_ACCESS_TOKEN }}
           path: prod-repo
 
-      - name: Copy updated donors.json to production checkout
+      - name: Copy updated donors.json to production repo root
         run: cp public/donors.json prod-repo/donors.json
 
-      - name: Commit and push to production repo
+      - name: Commit and push to production repo main
         uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "chore: Update form response data"
@@ -89,5 +89,5 @@ jobs:
           commit_user_name: "GitHub Actions Bot"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
           commit_author: "GitHub Actions Bot <github-actions[bot]@users.noreply.github.com>"
-          repository: prod-repo
+          repository: ./prod-repo
           branch: gh-pages
