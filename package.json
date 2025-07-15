@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "deploy:prod": "gh-pages -d dist -r https://github.com/medicina110ufpb/medicina110ufpb.github.io.git",
     "lint": "eslint src --ext .js,.ts,.vue",
     "prepare": "husky"
   },
