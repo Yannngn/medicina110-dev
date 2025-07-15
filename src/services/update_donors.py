@@ -25,9 +25,9 @@ def setup_gspread_credentials():
     Configura as credenciais do Google Sheets a partir da variável de ambiente.
     Retorna o cliente gspread autenticado.
     """
-    credentials_json = os.getenv("GSPREAD_PANDAS_CONFIG")
+    credentials_json = os.getenv("GCP_SA_KEY")
     if not credentials_json:
-        raise ValueError("GSPREAD_PANDAS_CONFIG environment variable not found")
+        raise ValueError("GCP_SA_KEY environment variable not found")
 
     # Parse the JSON credentials
     import json
