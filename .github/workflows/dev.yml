@@ -8,6 +8,7 @@ jobs:
   lint-and-test:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Set up Node.js
@@ -19,6 +20,8 @@ jobs:
       - name: Lint JS/TS/Vue
         run: npm run lint
       - name: Build
+        env: 
+          VITE_BASE_PATH: "/medicina110-dev/"
         run: npm run build
       - name: Run tests
         run: npm test || echo "No tests defined"

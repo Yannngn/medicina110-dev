@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/medicina110-dev/",
+  base: process.env.VITE_BASE_PATH || "/",
   plugins: [
     vue(),
     tailwindcss(),

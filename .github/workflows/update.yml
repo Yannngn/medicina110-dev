@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -20,13 +18,23 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas gspread gspread-pandas
-      - name: Run update_donors.py
+          pip install -r requirements.txt
+      - name: Run update script
+        env:
+          GSPREAD_PANDAS_CONFIG: ${{ secrets.GCP_SA_KEY }}
         run: python src/services/update_donors.py
       - name: Commit donors.json
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add public/assets/donors.json
-          git commit -m 'Atualiza donors.json via workflow' || echo "No changes to commit"
-          git push origin HEAD:gh_pages
+          git add ${{ env.OUTPUT_JSON_PATH }}
+          # Only commit and push if there are changes in the file
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "[Google Bot] updating donations" -a
+            git push
+          fi
+        env:
+          # Define o caminho do arquivo de saída como uma variável de ambiente para ser usada aqui
+          OUTPUT_JSON_PATH: 'public/donors.json'
