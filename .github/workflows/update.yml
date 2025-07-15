@@ -35,6 +35,7 @@ jobs:
       - name: Run update script
         env:
           SHEET_NAME: ${{ secrets.SHEET_NAME }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: python src/services/update_donors.py
       
       - name: Commit and push to dev main
