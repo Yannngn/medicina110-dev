@@ -31,11 +31,19 @@ def setup_gspread_credentials():
 
     # Parse the JSON credentials
     import json
-
     credentials_dict = json.loads(credentials_json)
 
-    # Create credentials and authorize gspread client
-    credentials = Credentials.from_service_account_info(credentials_dict)
+    # Define the required scopes for Google Sheets and Drive
+    scopes = [
+        "https://www.googleapis.com/auth/spreadsheets.readonly",
+        "https://www.googleapis.com/auth/drive.readonly"
+    ]
+
+    # Create credentials with proper scopes and authorize gspread client
+    credentials = Credentials.from_service_account_info(
+        credentials_dict, 
+        scopes=scopes
+    )
     gc = gspread.authorize(credentials)
 
     print("Credenciais do Google configuradas com sucesso.")
@@ -92,7 +100,7 @@ def main():
                 df = df[df[col].astype(str).str.strip() != ""]
 
         # Converte 'Valor' para numérico, tratando erros
-        df["Valor"] = df["Valor"].str.replace(",", ".")
+        df["Valor"] = df["Valor"].astype(str).str.replace(",", ".")
         df["Valor"] = pd.to_numeric(df["Valor"], errors="coerce")
 
         # Valida se a coluna é numérica após a conversão
@@ -121,7 +129,9 @@ def main():
 
         # --- 3. PROCESSAMENTO E AGREGAÇÃO ---
         # Agrega doações pelo nome do doador para somar os valores totais
-        aggregated_donors: pd.DataFrame = df.groupby("Nome").sum().reset_index()
+        # Remove a coluna 'Carimbo de data/hora' antes de agregar
+        donors_no_timestamp = df.drop(columns=["Carimbo de data/hora"])
+        aggregated_donors: pd.DataFrame = donors_no_timestamp.groupby("Nome", as_index=False).sum()
         print(f"Foram encontrados {len(aggregated_donors)} doadores únicos.")
 
         # --- 4. GERAÇÃO DAS LISTAS ---
