@@ -1,18 +1,5 @@
 {
-    "wordCloud": [
-        {
-            "text": "Yann Nóbrega",
-            "value": 5
-        }
-    ],
-    "topDonors": [
-        {
-            "name": "Yann Nóbrega"
-        }
-    ],
-    "latestDonations": [
-        {
-            "name": "Yann Nóbrega"
-        }
-    ]
+  "wordCloud": [{}],
+  "topDonors": [{}],
+  "latestDonations": [{}]
 }

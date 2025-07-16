@@ -98,8 +98,10 @@ def main():
                 df = df[df[col].astype(str).str.strip() != ""]
 
         # Converte 'Valor' para numérico, tratando erros
-        df["Valor"] = df["Valor"].astype(str).str.replace(",", ".")
-        df["Valor"] = pd.to_numeric(df["Valor"], errors="coerce")
+        df["Valor"] = pd.to_numeric(
+            df["Valor"].astype(str).str.replace(".", "").replace(",", "."),
+            errors="coerce",
+        )
 
         # Valida se a coluna é numérica após a conversão
         if not is_numeric_dtype(df["Valor"]):
