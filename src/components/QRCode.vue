@@ -1,37 +1,37 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const pixCopy = "00020126700014br.gov.bcb.pix0123yann.nicholas@gmail.com0221Livro de Ouro Med 1105204000053039865802BR5925YANN NICHOLAS GOMES DA NO6011JOAO PESSOA62150511livrodeouro6304CE83";
-const pixKey = "pix.yannnob@gmail.com";
-const emailKey = "yann.nicholas@gmail.com";
-const copied = ref(false);
+// const pixCopy = "";
+const pixKey = "";
+const emailKey = "medicina110ufpb@gmail.com";
+// const copied = ref(false);
 const emailCopied = ref(false);
 const pixKeyCopied = ref(false);
 
-async function copyPixKey() {
-  try {
-    if (navigator.clipboard && window.isSecureContext) {
-      await navigator.clipboard.writeText(pixCopy);
-    } else {
-      // Fallback para HTTP/browsers mais antigos
-      const textArea = document.createElement('textarea');
-      textArea.value = pixCopy;
-      textArea.style.position = 'fixed';
-      textArea.style.left = '-999999px';
-      textArea.style.top = '-999999px';
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-    }
-    copied.value = true;
-    setTimeout(() => (copied.value = false), 2000);
-  } catch (e) {
-    alert("Não foi possível copiar a chave PIX.");
-    console.error("Erro ao copiar a chave PIX:", e);
-  }
-}
+// async function copyPixKey() {
+//   try {
+//     if (navigator.clipboard && window.isSecureContext) {
+//       await navigator.clipboard.writeText(pixCopy);
+//     } else {
+//       // Fallback para HTTP/browsers mais antigos
+//       const textArea = document.createElement('textarea');
+//       textArea.value = pixCopy;
+//       textArea.style.position = 'fixed';
+//       textArea.style.left = '-999999px';
+//       textArea.style.top = '-999999px';
+//       document.body.appendChild(textArea);
+//       textArea.focus();
+//       textArea.select();
+//       document.execCommand('copy');
+//       document.body.removeChild(textArea);
+//     }
+//     copied.value = true;
+//     setTimeout(() => (copied.value = false), 2000);
+//   } catch (e) {
+//     alert("Não foi possível copiar a chave PIX.");
+//     console.error("Erro ao copiar a chave PIX:", e);
+//   }
+// }
 
 async function copyEmail() {
   try {
@@ -89,37 +89,34 @@ async function copyPixKeyOnly() {
     <div class="container section-component">
       <span class="hidden-block"></span>
       <div
-        class="resizeble-image relative group cursor-pointer border-2 border-transparent rounded-lg hover:border-[var(--color-accent-soft)]"
-        @click="copyPixKey">
-        <img src="../assets/pixyannob.jpeg" alt="QR Code para doação" class="rounded shadow-lg" />
-        <div v-if="copied"
+        class="resizeble-image relative group cursor-pointer border-2 border-transparent rounded-lg hover:border-[var(--color-accent-soft)]">
+        <!-- @click="copyPixKey"> -->
+        <!-- <img src="../assets/pixyannob.jpeg" alt="QR Code para doação" class="rounded shadow-lg" /> -->
+        <img src="../assets/brasao-image.png" alt="Brasão da Turma Medicina 110 UFPB" class="resizeble-image" />
+        <!-- <div v-if="copied"
           class="absolute inset-0 flex items-center justify-center backdrop-blur-sm backdrop-brightness-50 text-white text-lg font-semibold transition">
           PIX copiado!
         </div>
         <div v-else
           class="absolute bottom-2 left-1/2 -translate-x-1/2 backdrop-blur-sm backdrop-brightness-50 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
           Clique para copiar a chave PIX
-        </div>
+        </div> -->
       </div>
-      <h2 class="section-h2 font-bold text-red-600 md:mb-2">
-        Não faça doações ainda!
-      </h2>
-      <p class="section-p font-bold text-red-600 md:mb-2">Vamos colocar na conta da comissão</p>
       <div class="columns-component pt-2 gap-y-2 h-fit">
         <div class="text-center">
           <h2 class="section-h2 font-bold text-[var(--color-accent)] md:mb-2">
             Dados Bancários
           </h2>
           <p class="section-p text-[var(--color-text)]">
-            Banco: <span class="font-semibold">001</span>
+            Banco: <span class="font-semibold">033 Santander</span>
           </p>
           <p class="section-p text-[var(--color-text)]">
-            Agência: <span class="font-semibold">1635-7</span>
+            Agência: <span class="font-semibold">3439</span>
           </p>
           <p class="section-p text-[var(--color-text)]">
-            Conta: <span class="font-semibold">76360-8</span>
+            Conta: <span class="font-semibold">18319-9</span>
           </p>
-          <p class="section-p text-[var(--color-text)]">
+          <p class="hidden section-p text-[var(--color-text)]">
             PIX: <span class="font-semibold cursor-pointer hover:text-[var(--color-accent)] transition-colors relative"
               @click="copyPixKeyOnly" title="Clique para copiar a chave PIX">
               {{ pixKey }}
@@ -135,7 +132,10 @@ async function copyPixKeyOnly() {
             Contato
           </h2>
           <p class="section-p text-[var(--color-text)]">
-            WhatsApp: <span class="font-semibold">(83) 9 8673-7221</span>
+            Nome: <span class="font-semibold">Matheus Felipe de Macedo Freire</span>
+          </p>
+          <p class="section-p text-[var(--color-text)]">
+            WhatsApp: <span class="font-semibold">(81) 9 9330-0128</span>
           </p>
           <p class="section-p text-[var(--color-text)]">
             Email:
@@ -177,8 +177,8 @@ async function copyPixKeyOnly() {
 }
 
 .resizeble-image {
-  margin-top: 2rem;
-  width: max(10rem, 24vh);
+  width: max(8rem, 16vh);
+  aspect-ratio: 1 / 1;
 }
 
 .section-component {
