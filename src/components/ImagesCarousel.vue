@@ -20,16 +20,10 @@ const options = {
   <Splide :options="options" aria-label="Image Carousel">
     <SplideSlide v-for="(pic, idx) in props.pictures" :key="pic.src + idx">
       <div class="flex items-center justify-center h-full">
-        <img
-          :src="pic.src"
-          :alt="pic.alt"
-          class="max-h-[50vh] w-auto"
-        />
+        <img :src="pic.src" :alt="pic.alt" class="max-h-[50vh] w-auto" />
       </div>
     </SplideSlide>
   </Splide>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

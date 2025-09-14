@@ -142,8 +142,6 @@ function toggleTheme() {
 </template>
 
 <style>
-
-
 section {
   height: 100vh;
   display: flex;

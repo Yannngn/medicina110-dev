@@ -33,6 +33,4 @@ function formatCurrency(amount: number) {
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

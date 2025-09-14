@@ -22,9 +22,9 @@ defineProps<{
 </template>
 
 <style scoped>
-  .columns-component {
-    justify-content: center;
-  }
+.columns-component {
+  justify-content: center;
+}
 
 @media (max-height: 432px) {
   .section-component {

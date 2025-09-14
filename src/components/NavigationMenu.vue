@@ -29,26 +29,23 @@ function handleScrollToSection(index: number) {
     <transition name="dropup-menu">
       <div v-if="isMenuOpen" class="flex flex-col gap-2 p-2 absolute left-0 mt-2 rounded-lg shadow-lg backdrop-blur"
         style="min-width:max-content; width:auto;">
-        <button @click="handleScrollToSection(0)"
-          class="text-xs m-2 p-2 rounded-lg shadow-md transition">
+        <button @click="handleScrollToSection(0)" class="text-xs m-2 p-2 rounded-lg shadow-md transition">
           🏠 Início
         </button>
-        <button @click="handleScrollToSection(1)"
-          class="text-xs m-2 p-2 rounded-lg shadow-md transition">
+        <button @click="handleScrollToSection(1)" class="text-xs m-2 p-2 rounded-lg shadow-md transition">
           👩‍⚕️ Conheça a Turma
         </button>
-        <button @click="handleScrollToSection(2)"
-          class="text-xs m-2 p-2 rounded-lg shadow-md transition">
+        <button @click="handleScrollToSection(2)" class="text-xs m-2 p-2 rounded-lg shadow-md transition">
           💰 Faça sua Doação
         </button>
-        <button @click="handleScrollToSection(3)"
-          class="text-xs m-2 p-2 rounded-lg shadow-md transition">
+        <button @click="handleScrollToSection(3)" class="text-xs m-2 p-2 rounded-lg shadow-md transition">
           🏆 Ver Doadores
         </button>
-        <button @click="handleScrollToSection(4)"
-          class="text-xs m-2 p-2 rounded-lg shadow-md transition">
+        <button @click="handleScrollToSection(4)" class="text-xs m-2 p-2 rounded-lg shadow-md transition">
           ✨ Nuvem de Doadores
         </button>
+        <a href="https://github.com/Yannngn" target="_blank" rel="noopener" class="underline text-xs hover:text-accent"
+          style="color: var(--color-background)">@Yannngn</a>
       </div>
     </transition>
   </div>
