@@ -5,11 +5,11 @@
             "value": 5
         },
         {
-            "text": "Flavia Cristina N Ribeiro",
+            "text": "Eduardo Henrique Lima Batista ",
             "value": 4
         },
         {
-            "text": "Eduardo Henrique Lima Batista ",
+            "text": "Flavia Cristina N Ribeiro",
             "value": 4
         },
         {
@@ -17,15 +17,15 @@
             "value": 4
         },
         {
-            "text": "Marcelo de Morais Rosendo",
-            "value": 3
-        },
-        {
             "text": "Isabela Fernandes Scabello ",
             "value": 3
         },
         {
             "text": "Barbara Vilhena Montenegro",
+            "value": 3
+        },
+        {
+            "text": "Marcelo de Morais Rosendo",
             "value": 3
         },
         {
@@ -37,11 +37,11 @@
             "value": 3
         },
         {
-            "text": "Tatyana Tabosa de Azevedo Braz ",
+            "text": "Anne Karinini Silva Gama ",
             "value": 3
         },
         {
-            "text": "Anne Karinini Silva Gama ",
+            "text": "Tatyana Tabosa de Azevedo Braz ",
             "value": 2
         },
         {
@@ -54,10 +54,6 @@
         },
         {
             "text": "Ana Beatriz Gondim Dantas ",
-            "value": 2
-        },
-        {
-            "text": "Marcelo de Morais Rosendo ",
             "value": 2
         }
     ],
@@ -98,9 +94,6 @@
             "name": "Marcelo de Morais Rosendo"
         },
         {
-            "name": "Marcelo de Morais Rosendo "
-        },
-        {
             "name": "Ana Beatriz Gondim Dantas "
         },
         {
@@ -123,6 +116,9 @@
         },
         {
             "name": "Amanda Thaise de Souza "
+        },
+        {
+            "name": "Tatyana Tabosa de Azevedo Braz "
         }
     ]
 }
