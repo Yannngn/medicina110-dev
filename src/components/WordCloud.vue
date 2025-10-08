@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, onMounted, onUnmounted } from "vue";
+import { computed, onMounted, onUnmounted, ref } from "vue";
 // @ts-expect-error vue3-word-cloud has no types
 import Vue3WordCloud from "vue3-word-cloud";
 

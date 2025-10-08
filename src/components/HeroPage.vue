@@ -11,9 +11,12 @@ defineEmits(["donate", "doctors", "donators", "cloud"]);
       <h1 class="px-8 section-h1 font-fancy font-medium gold-gradient-text text-[var(--color-accent)]">
         Livro de Ouro
       </h1>
-      <h2 class="px-8 section-h2 font-semibold text-[var(--color-text)]">
-        Turma Medicina 110 UFPB
+      <h2 class="px-8 section-h2 text-[var(--color-text)] font-fancy font-medium">
+        Turma Karina Maria Azevedo Bringel
       </h2>
+      <h3 class="px-8 section-h3 italic text-[var(--color-text)]">
+        Medicina 110 UFPB
+      </h3>
       <p class="px-8 md:px-16 section-p text-[var(--color-footer)]">
         Este é o nosso Livro de Ouro digital! Contribua com a nossa formatura e
         tenha seu nome eternizado em nossa página.

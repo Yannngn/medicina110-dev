@@ -3,16 +3,16 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 import BackgroundPattern from "./components/BackgroundPattern.vue";
 import HeroPage from "./components/HeroPage.vue";
 import ImagesPage from "./components/ImagesPage.vue";
-import QRCode from "./components/QRCode.vue";
-import TablesPage from "./components/TablesPage.vue";
-import MentiMeter from "./components/WordCloud.vue";
 import NavigationMenu from "./components/NavigationMenu.vue";
-import ThemeToggle from "./components/ThemeToggle.vue";
+import QRCode from "./components/QRCode.vue";
 import SectionIndicator from "./components/SectionIndicator.vue";
+import TablesPage from "./components/TablesPage.vue";
+import ThemeToggle from "./components/ThemeToggle.vue";
+import MentiMeter from "./components/WordCloud.vue";
 import {
   fetchData,
-  topDonors,
   latestDonations,
+  topDonors,
   wordCloud,
 } from "./services/data-service";
 
@@ -181,7 +181,13 @@ section {
 
 .section-h2 {
   text-align: center;
-  font-size: var(--text-xl);
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+}
+
+.section-h3 {
+  text-align: center;
+  font-size: var(--text-2xl);
   line-height: var(--tw-leading, var(--text-xl--line-height));
 }
 

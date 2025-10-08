@@ -16,7 +16,7 @@ function formatCurrency(amount: number) {
 
 <template>
   <div class="md:justify-top my-8">
-    <h2 class="mb-2 section-h2 font-semibold text-[var(--color-accent)]">
+    <h2 class="mb-2 section-h2 text-[var(--color-accent)] font-fancy font-medium">
       {{ title }}
     </h2>
     <ul v-if="data.length > 0" class="max-h-40% space-y-auto overflow-y-auto no-scrollbar">

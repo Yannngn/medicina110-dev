@@ -108,15 +108,6 @@ async function copyPixKeyOnly() {
             Dados Bancários
           </h2>
           <p class="section-p text-[var(--color-text)]">
-            Banco: <span class="font-semibold">033 Santander</span>
-          </p>
-          <p class="section-p text-[var(--color-text)]">
-            Agência: <span class="font-semibold">3439</span>
-          </p>
-          <p class="section-p text-[var(--color-text)]">
-            Conta: <span class="font-semibold">18319-9</span>
-          </p>
-          <p class="section-p text-[var(--color-text)]">
             PIX: <span class="font-semibold">Nubank</span>
           </p>
           <p class="section-p text-[var(--color-text)]">

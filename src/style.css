@@ -16,11 +16,9 @@
   --color-accent-soft: #c59d5f88;
   --color-border: #e2e8f0;
   --color-footer: #64748b;
-  --color-bg-gradient: radial-gradient(
-    circle at center,
-    rgba(226, 232, 240, 1) 25%,
-    rgba(226, 232, 240, 0.2) 100%
-  );
+  --color-bg-gradient: radial-gradient(circle at center,
+      rgba(226, 232, 240, 1) 25%,
+      rgba(226, 232, 240, 0.2) 100%);
 }
 
 .dark {
@@ -32,11 +30,9 @@
   --color-accent-soft: #c59d5f88;
   --color-border: #334155;
   --color-footer: #475569;
-  --color-bg-gradient: radial-gradient(
-    circle at center,
-    rgba(15, 23, 43, 1) 25%,
-    rgba(15, 23, 43, 0.2) 100%
-  );
+  --color-bg-gradient: radial-gradient(circle at center,
+      rgba(15, 23, 43, 1) 25%,
+      rgba(15, 23, 43, 0.2) 100%);
 }
 
 :root {
@@ -57,7 +53,8 @@
   background-color: var(--color-bg);
 }
 
-button, a.btn{
+button,
+a.btn {
   border: 1px solid transparent;
   font-size: 1em;
   font-weight: 500;
@@ -67,7 +64,8 @@ button, a.btn{
   color: var(--color-text);
 }
 
-button:hover, a.btn:hover{
+button:hover,
+a.btn:hover {
   border-color: var(--color-accent);
   box-shadow: 0 0 32px 0 var(--color-accent-soft);
 }
@@ -86,6 +84,7 @@ footer {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
