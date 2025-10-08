@@ -85,16 +85,14 @@ def main():
             "Valor",
         ]
         if not all(col in df.columns for col in required_cols):
-            raise ValueError(
-                "A planilha não contém as colunas necessárias: " + str(required_cols)
-            )
+            raise ValueError("A planilha não contém as colunas necessárias: " + str(required_cols))
 
         # Remove linhas onde o nome do doador ou o valor da doação estão vazios
         df.dropna(subset=required_cols, inplace=True)
 
         # Remove linhas onde os campos de texto estão vazios (apenas espaços em branco)
         for col in ["Nome"]:
-            if col in df.columns and df[col].dtype == "object":
+            if col in df.columns and df[col].dtype in ["object", str, "string"]:
                 df = df[df[col].astype(str).str.strip() != ""]
 
         # Converte 'Valor' para numérico, tratando erros
@@ -105,25 +103,20 @@ def main():
 
         # Valida se a coluna é numérica após a conversão
         if not is_numeric_dtype(df["Valor"]):
-            raise TypeError(
-                "A coluna 'Valor' não pôde ser convertida para um tipo numérico."
-            )
+            raise TypeError("A coluna 'Valor' não pôde ser convertida para um tipo numérico.")
 
         # Remove linhas onde a conversão falhou (resultando em NaT)
-        df.dropna(subset=["Valor"], inplace=True)
+        df.dropna(subset=["Valor"], inplace=True)  # type: ignore
 
         # Garante que 'Carimbo de data/hora' seja do tipo datetime para ordenação
-        df["Carimbo de data/hora"] = pd.to_datetime(
-            df["Carimbo de data/hora"], errors="coerce"
-        )
-        df.dropna(subset=["Carimbo de data/hora"], inplace=True)
+        df["Carimbo de data/hora"] = pd.to_datetime(df["Carimbo de data/hora"], errors="coerce")
+
+        df.dropna(subset=["Carimbo de data/hora"], inplace=True)  # type: ignore
 
         print(f"Após limpeza e validação, restaram {len(df)} doações válidas.")
 
         if df.empty:
-            print(
-                "Nenhuma doação válida encontrada após a limpeza. Gerando arquivo JSON vazio."
-            )
+            print("Nenhuma doação válida encontrada após a limpeza. Gerando arquivo JSON vazio.")
             create_empty_json()
             return
 
@@ -131,9 +124,8 @@ def main():
         # Agrega doações pelo nome do doador para somar os valores totais
         # Remove a coluna 'Carimbo de data/hora' antes de agregar
         donors_no_timestamp = df.drop(columns=["Carimbo de data/hora"])
-        aggregated_donors: pd.DataFrame = donors_no_timestamp.groupby(
-            "Nome", as_index=False
-        ).sum()
+        aggregated_donors: pd.DataFrame = donors_no_timestamp.groupby("Nome", as_index=False).sum()  # type: ignore
+
         print(f"Foram encontrados {len(aggregated_donors)} doadores únicos.")
 
         # --- 4. GERAÇÃO DAS LISTAS ---
@@ -148,22 +140,18 @@ def main():
 
         # Lista dos Últimos Doadores (baseado no Carimbo de data/hora, pegando doadores únicos)
         latest_donors_df: pd.DataFrame = (
-            df.sort_values(by="Carimbo de data/hora", ascending=False)
-            .drop_duplicates(subset=["Nome"])
-            .head(LATEST_N_DONORS)
+            df.sort_values(by="Carimbo de data/hora", ascending=False).drop_duplicates(subset=["Nome"]).head(LATEST_N_DONORS)  # type: ignore
         )
         latest_donors_list = [
             {
                 "name": row["Nome"],
             }  # "amount": row["Valor"]}
-            for index, row in latest_donors_df.iterrows()
+            for _index, row in latest_donors_df.iterrows()
         ]
 
         # --- 5. NORMALIZAÇÃO DE PESOS PARA A NUVEM DE PALAVRAS (TIERED) ---
         # Ordena doadores por Valor (maior para menor)
-        sorted_donors = aggregated_donors.sort_values(
-            by="Valor", ascending=False
-        ).reset_index(drop=True)
+        sorted_donors = aggregated_donors.sort_values(by="Valor", ascending=False).reset_index(drop=True)
         weights = []
         for idx in range(len(sorted_donors)):
             if idx == 0:
@@ -179,10 +167,7 @@ def main():
         sorted_donors["weight"] = weights
 
         # Prepara os dados para a nuvem de palavras no formato {text, value}
-        word_cloud_data = [
-            {"text": row["Nome"], "value": row["weight"]}
-            for index, row in sorted_donors.iterrows()
-        ]
+        word_cloud_data = [{"text": row["Nome"], "value": row["weight"]} for index, row in sorted_donors.iterrows()]
 
         # --- 6. ESTRUTURAÇÃO E SALVAMENTO DO JSON FINAL ---
         final_json_data = {
