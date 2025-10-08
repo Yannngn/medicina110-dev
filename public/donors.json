@@ -3,14 +3,24 @@
         {
             "text": "Karina Maria Azevedo Bringel",
             "value": 5
+        },
+        {
+            "text": "Mariá Queiroz de Queiroz",
+            "value": 4
         }
     ],
     "topDonors": [
         {
             "name": "Karina Maria Azevedo Bringel"
+        },
+        {
+            "name": "Mariá Queiroz de Queiroz"
         }
     ],
     "latestDonations": [
+        {
+            "name": "Mariá Queiroz de Queiroz"
+        },
         {
             "name": "Karina Maria Azevedo Bringel"
         }
