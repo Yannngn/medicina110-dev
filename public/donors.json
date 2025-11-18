@@ -13,23 +13,15 @@
             "value": 4
         },
         {
-            "text": "Luis Fabio Botelho",
+            "text": "Amanda Raphaella M. Lima",
             "value": 4
         },
         {
-            "text": "Amanda Raphaella M. Lima",
+            "text": "Luis Fabio Botelho",
             "value": 3
         },
         {
             "text": "Flavia Cristina N Ribeiro",
-            "value": 3
-        },
-        {
-            "text": "Eduardo Henrique Lima Batista ",
-            "value": 3
-        },
-        {
-            "text": "Venturielso Ventura Gomes",
             "value": 3
         },
         {
@@ -38,6 +30,14 @@
         },
         {
             "text": "Gabriel Targueta",
+            "value": 3
+        },
+        {
+            "text": "Eduardo Henrique Lima Batista ",
+            "value": 3
+        },
+        {
+            "text": "Venturielso Ventura Gomes",
             "value": 3
         },
         {
@@ -53,23 +53,11 @@
             "value": 2
         },
         {
+            "text": "Wanessa Carvalho",
+            "value": 2
+        },
+        {
             "text": "Samara Araujo de Bulhões",
-            "value": 2
-        },
-        {
-            "text": "Ana Lucia de Medeiros",
-            "value": 2
-        },
-        {
-            "text": "Barbara Vilhena Montenegro",
-            "value": 2
-        },
-        {
-            "text": "Ana Flavia Silva Amorim Arruda",
-            "value": 2
-        },
-        {
-            "text": "Albm Serviços Medicos",
             "value": 2
         },
         {
@@ -77,15 +65,27 @@
             "value": 2
         },
         {
-            "text": "Marcelo de Morais Rosendo",
+            "text": "Ana Lucia de Medeiros",
             "value": 2
         },
         {
-            "text": "Bianca Vasconcelos Braga",
+            "text": "Andressa Carvalho",
+            "value": 2
+        },
+        {
+            "text": "Ana Flavia Silva Amorim Arruda",
+            "value": 2
+        },
+        {
+            "text": "Barbara Vilhena Montenegro",
+            "value": 2
+        },
+        {
+            "text": "Albm Serviços Medicos",
             "value": 1
         },
         {
-            "text": "Bianca Lucas Fernandes",
+            "text": "Marcelo de Morais Rosendo",
             "value": 1
         },
         {
@@ -93,7 +93,15 @@
             "value": 1
         },
         {
+            "text": "Bianca Lucas Fernandes",
+            "value": 1
+        },
+        {
             "text": "Isabela Fernandes Scabello ",
+            "value": 1
+        },
+        {
+            "text": "Bianca Vasconcelos Braga",
             "value": 1
         },
         {
@@ -109,11 +117,7 @@
             "value": 1
         },
         {
-            "text": "Rômulo",
-            "value": 1
-        },
-        {
-            "text": "Anne Karinini Silva Gama ",
+            "text": "Mariá Queiroz de Queiroz",
             "value": 1
         },
         {
@@ -121,11 +125,11 @@
             "value": 1
         },
         {
-            "text": "Fabricia Santos Silva",
+            "text": "Anne Karinini Silva Gama ",
             "value": 1
         },
         {
-            "text": "Louyse Jerônimo",
+            "text": "Fabricia Santos Silva",
             "value": 1
         },
         {
@@ -137,7 +141,11 @@
             "value": 1
         },
         {
-            "text": "Mariá Queiroz de Queiroz",
+            "text": "Louyse Jerônimo",
+            "value": 1
+        },
+        {
+            "text": "Rômulo",
             "value": 1
         },
         {
@@ -203,6 +211,12 @@
     ],
     "latestDonations": [
         {
+            "name": "Andressa Carvalho"
+        },
+        {
+            "name": "Wanessa Carvalho"
+        },
+        {
             "name": "Igor Suassuna"
         },
         {
@@ -225,12 +239,6 @@
         },
         {
             "name": "Raquel Silveira da Cunha Araujo"
-        },
-        {
-            "name": "Ana Maria Ramos"
-        },
-        {
-            "name": "Bianca Leite Morais"
         }
     ]
 }
