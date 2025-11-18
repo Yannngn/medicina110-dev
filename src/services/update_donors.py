@@ -114,7 +114,7 @@ def main():
 
         # Garante que 'Carimbo de data/hora' seja do tipo datetime para ordenação
         df["Carimbo de data/hora"] = pd.to_datetime(
-            df["Carimbo de data/hora"], errors="coerce"
+            df["Carimbo de data/hora"], dayfirst=True, errors="coerce"
         )
 
         df.dropna(subset=["Carimbo de data/hora"], inplace=True)  # type: ignore
