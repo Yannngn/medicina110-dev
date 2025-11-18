@@ -5,7 +5,11 @@
             "value": 5
         },
         {
-            "text": "Alex Tirbutino Meira",
+            "text": "Amanda Raphaella M. Lima",
+            "value": 4
+        },
+        {
+            "text": "Luis Fabio Botelho",
             "value": 4
         },
         {
@@ -13,19 +17,19 @@
             "value": 4
         },
         {
-            "text": "Amanda Raphaella M. Lima",
-            "value": 4
-        },
-        {
-            "text": "Luis Fabio Botelho",
+            "text": "Alex Tirbutino Meira",
             "value": 3
         },
         {
-            "text": "Flavia Cristina N Ribeiro",
+            "text": "Venturielso Ventura Gomes",
             "value": 3
         },
         {
             "text": "Sabina Bastos Maia",
+            "value": 3
+        },
+        {
+            "text": "Flavia Cristina N Ribeiro",
             "value": 3
         },
         {
@@ -37,11 +41,11 @@
             "value": 3
         },
         {
-            "text": "Venturielso Ventura Gomes",
-            "value": 3
+            "text": "Raquel Silveira da Cunha Araujo",
+            "value": 2
         },
         {
-            "text": "Raquel Silveira da Cunha Araujo",
+            "text": "Renata Medeiros Vanderley",
             "value": 2
         },
         {
@@ -61,7 +65,7 @@
             "value": 2
         },
         {
-            "text": "Maria das Graças Azevedo Diniz",
+            "text": "Marcelo de Morais Rosendo",
             "value": 2
         },
         {
@@ -73,19 +77,19 @@
             "value": 2
         },
         {
-            "text": "Ana Flavia Silva Amorim Arruda",
+            "text": "Barbara Vilhena Montenegro",
             "value": 2
         },
         {
-            "text": "Barbara Vilhena Montenegro",
-            "value": 2
+            "text": "Bianca Lucas Fernandes",
+            "value": 1
         },
         {
             "text": "Albm Serviços Medicos",
             "value": 1
         },
         {
-            "text": "Marcelo de Morais Rosendo",
+            "text": "Ana Flavia Silva Amorim Arruda",
             "value": 1
         },
         {
@@ -93,7 +97,7 @@
             "value": 1
         },
         {
-            "text": "Bianca Lucas Fernandes",
+            "text": "Bianca Vasconcelos Braga",
             "value": 1
         },
         {
@@ -101,7 +105,7 @@
             "value": 1
         },
         {
-            "text": "Bianca Vasconcelos Braga",
+            "text": "Maria das Graças Azevedo Diniz",
             "value": 1
         },
         {
@@ -121,19 +125,19 @@
             "value": 1
         },
         {
-            "text": "Ana Maria Ramos",
-            "value": 1
-        },
-        {
             "text": "Anne Karinini Silva Gama ",
             "value": 1
         },
         {
-            "text": "Fabricia Santos Silva",
+            "text": "Ana Maria Ramos",
             "value": 1
         },
         {
             "text": "Igor Suassuna",
+            "value": 1
+        },
+        {
+            "text": "Fabricia Santos Silva",
             "value": 1
         },
         {
@@ -206,10 +210,13 @@
             "name": "Raquel Silveira da Cunha Araujo"
         },
         {
-            "name": "Sabina Bastos Maia"
+            "name": "Renata Medeiros Vanderley"
         }
     ],
     "latestDonations": [
+        {
+            "name": "Renata Medeiros Vanderley"
+        },
         {
             "name": "Andressa Carvalho"
         },
@@ -236,9 +243,6 @@
         },
         {
             "name": "Venturielso Ventura Gomes"
-        },
-        {
-            "name": "Raquel Silveira da Cunha Araujo"
         }
     ]
 }
