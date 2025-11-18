@@ -9,12 +9,16 @@
             "value": 4
         },
         {
+            "text": "Luis Fabio Botelho",
+            "value": 4
+        },
+        {
             "text": "José Eymard Moraes de Medeiros",
             "value": 4
         },
         {
-            "text": "Luis Fabio Botelho",
-            "value": 4
+            "text": "Alex Tirbutino Meira",
+            "value": 3
         },
         {
             "text": "Flavia Cristina N Ribeiro",
@@ -38,7 +42,7 @@
         },
         {
             "text": "Eduardo Henrique Lima Batista ",
-            "value": 3
+            "value": 2
         },
         {
             "text": "Márcio Murilo Pereira Vieira ",
@@ -78,7 +82,7 @@
         },
         {
             "text": "Barbara Vilhena Montenegro",
-            "value": 2
+            "value": 1
         },
         {
             "text": "Isabela Fernandes Scabello ",
@@ -166,6 +170,9 @@
             "name": "Karina Maria Azevedo Bringel"
         },
         {
+            "name": "Alex Tirbutino Meira"
+        },
+        {
             "name": "Amanda Raphaella M. Lima"
         },
         {
@@ -188,12 +195,12 @@
         },
         {
             "name": "Sabina Bastos Maia"
-        },
-        {
-            "name": "Venturielso Ventura Gomes"
         }
     ],
     "latestDonations": [
+        {
+            "name": "Alex Tirbutino Meira"
+        },
         {
             "name": "Priscila USOT"
         },
@@ -220,9 +227,6 @@
         },
         {
             "name": "Maria das Graças Azevedo Diniz"
-        },
-        {
-            "name": "Rômulo"
         }
     ]
 }
