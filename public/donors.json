@@ -9,7 +9,7 @@
             "value": 4
         },
         {
-            "text": "Luis Fabio Botelho",
+            "text": "Alex Tirbutino Meira",
             "value": 4
         },
         {
@@ -17,7 +17,23 @@
             "value": 4
         },
         {
-            "text": "Alex Tirbutino Meira",
+            "text": "Luis Fabio Botelho",
+            "value": 3
+        },
+        {
+            "text": "Eduardo Henrique Lima Batista ",
+            "value": 3
+        },
+        {
+            "text": "Marcelo Vicente de Araùjo",
+            "value": 3
+        },
+        {
+            "text": "Gabriel Targueta",
+            "value": 3
+        },
+        {
+            "text": "Renata Medeiros Vanderley",
             "value": 3
         },
         {
@@ -26,30 +42,14 @@
         },
         {
             "text": "Sabina Bastos Maia",
-            "value": 3
-        },
-        {
-            "text": "Flavia Cristina N Ribeiro",
-            "value": 3
-        },
-        {
-            "text": "Gabriel Targueta",
-            "value": 3
-        },
-        {
-            "text": "Eduardo Henrique Lima Batista ",
-            "value": 3
+            "value": 2
         },
         {
             "text": "Raquel Silveira da Cunha Araujo",
             "value": 2
         },
         {
-            "text": "Renata Medeiros Vanderley",
-            "value": 2
-        },
-        {
-            "text": "Bianca Leite Morais",
+            "text": "Flavia Cristina N Ribeiro",
             "value": 2
         },
         {
@@ -57,15 +57,19 @@
             "value": 2
         },
         {
-            "text": "Wanessa Carvalho",
+            "text": "Bianca Leite Morais",
             "value": 2
         },
         {
-            "text": "Samara Araujo de Bulhões",
+            "text": "Bianca Lucas Fernandes",
             "value": 2
         },
         {
-            "text": "Marcelo de Morais Rosendo",
+            "text": "Ana Flavia Silva Amorim Arruda",
+            "value": 2
+        },
+        {
+            "text": "Albm Serviços Medicos",
             "value": 2
         },
         {
@@ -73,23 +77,27 @@
             "value": 2
         },
         {
-            "text": "Andressa Carvalho",
+            "text": "Samara Araujo de Bulhões",
             "value": 2
         },
         {
             "text": "Barbara Vilhena Montenegro",
-            "value": 2
-        },
-        {
-            "text": "Bianca Lucas Fernandes",
             "value": 1
         },
         {
-            "text": "Albm Serviços Medicos",
+            "text": "Rodrigo Nascimento de Farias",
             "value": 1
         },
         {
-            "text": "Ana Flavia Silva Amorim Arruda",
+            "text": "Roberta Tavares de Barreto",
+            "value": 1
+        },
+        {
+            "text": "Maria das Graças Azevedo Diniz",
+            "value": 1
+        },
+        {
+            "text": "Marcelo de Morais Rosendo",
             "value": 1
         },
         {
@@ -101,11 +109,15 @@
             "value": 1
         },
         {
-            "text": "Isabela Fernandes Scabello ",
+            "text": "Andressa Carvalho",
             "value": 1
         },
         {
-            "text": "Maria das Graças Azevedo Diniz",
+            "text": "Wanessa Carvalho",
+            "value": 1
+        },
+        {
+            "text": "Isabela Fernandes Scabello ",
             "value": 1
         },
         {
@@ -117,14 +129,6 @@
             "value": 1
         },
         {
-            "text": "Tatyana Tabosa de Azevedo Braz ",
-            "value": 1
-        },
-        {
-            "text": "Mariá Queiroz de Queiroz",
-            "value": 1
-        },
-        {
             "text": "Anne Karinini Silva Gama ",
             "value": 1
         },
@@ -133,15 +137,15 @@
             "value": 1
         },
         {
-            "text": "Igor Suassuna",
-            "value": 1
-        },
-        {
             "text": "Fabricia Santos Silva",
             "value": 1
         },
         {
-            "text": "Lorena Souza dos Santos Lima ",
+            "text": "Tatyana Tabosa de Azevedo Braz ",
+            "value": 1
+        },
+        {
+            "text": "Igor Suassuna",
             "value": 1
         },
         {
@@ -149,7 +153,15 @@
             "value": 1
         },
         {
+            "text": "Mariá Queiroz de Queiroz",
+            "value": 1
+        },
+        {
             "text": "Rômulo",
+            "value": 1
+        },
+        {
+            "text": "Lorena Souza dos Santos Lima ",
             "value": 1
         },
         {
@@ -161,7 +173,7 @@
             "value": 1
         },
         {
-            "text": "Luis Eduardo Negreiros Assunção",
+            "text": "José Lucas Sarmento Figueiredo",
             "value": 1
         },
         {
@@ -173,7 +185,19 @@
             "value": 1
         },
         {
+            "text": "Luis Eduardo Negreiros Assunção",
+            "value": 1
+        },
+        {
             "text": "Ana Beatriz Gondim Dantas ",
+            "value": 1
+        },
+        {
+            "text": "João Ricardo Nascimento ",
+            "value": 1
+        },
+        {
+            "text": "Henrique Hamad ",
             "value": 1
         },
         {
@@ -207,13 +231,31 @@
             "name": "Gabriel Targueta"
         },
         {
-            "name": "Raquel Silveira da Cunha Araujo"
+            "name": "Marcelo Vicente de Araùjo"
         },
         {
-            "name": "Renata Medeiros Vanderley"
+            "name": "Raquel Silveira da Cunha Araujo"
         }
     ],
     "latestDonations": [
+        {
+            "name": "João Ricardo Nascimento "
+        },
+        {
+            "name": "Henrique Hamad "
+        },
+        {
+            "name": "Marcelo Vicente de Araùjo"
+        },
+        {
+            "name": "Roberta Tavares de Barreto"
+        },
+        {
+            "name": "Rodrigo Nascimento de Farias"
+        },
+        {
+            "name": "José Lucas Sarmento Figueiredo"
+        },
         {
             "name": "Renata Medeiros Vanderley"
         },
@@ -225,24 +267,6 @@
         },
         {
             "name": "Igor Suassuna"
-        },
-        {
-            "name": "Alex Tirbutino Meira"
-        },
-        {
-            "name": "Priscila USOT"
-        },
-        {
-            "name": "Albm Serviços Medicos"
-        },
-        {
-            "name": "Bianca Vasconcelos Braga"
-        },
-        {
-            "name": "Fabricia Santos Silva"
-        },
-        {
-            "name": "Venturielso Ventura Gomes"
         }
     ]
 }
