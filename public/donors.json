@@ -5,23 +5,19 @@
             "value": 5
         },
         {
+            "text": "André Telis Vilela",
+            "value": 4
+        },
+        {
             "text": "Jacicarlos Lima de Alencar",
             "value": 4
         },
         {
+            "text": "Estácio Amaro",
+            "value": 4
+        },
+        {
             "text": "Amanda Raphaella M. Lima",
-            "value": 4
-        },
-        {
-            "text": "Alex Tirbutino Meira",
-            "value": 4
-        },
-        {
-            "text": "Luis Fabio Botelho",
-            "value": 3
-        },
-        {
-            "text": "José Eymard Moraes de Medeiros",
             "value": 3
         },
         {
@@ -29,7 +25,15 @@
             "value": 3
         },
         {
-            "text": "Monica Janine Freitas",
+            "text": "José Eymard Moraes de Medeiros",
+            "value": 3
+        },
+        {
+            "text": "Alex Tirbutino Meira",
+            "value": 3
+        },
+        {
+            "text": "Luis Fabio Botelho",
             "value": 3
         },
         {
@@ -37,15 +41,15 @@
             "value": 3
         },
         {
-            "text": "Francisco Rasiah",
-            "value": 3
-        },
-        {
-            "text": "Eduardo Henrique Lima Batista ",
+            "text": "Monica Janine Freitas",
             "value": 2
         },
         {
-            "text": "Werton Medeiros ",
+            "text": "Gabriel Targueta",
+            "value": 2
+        },
+        {
+            "text": "Eduardo Henrique Lima Batista ",
             "value": 2
         },
         {
@@ -65,27 +69,31 @@
             "value": 2
         },
         {
-            "text": "Flavia Cristina N Ribeiro",
-            "value": 2
-        },
-        {
-            "text": "Gabriel Targueta",
-            "value": 2
-        },
-        {
             "text": "Venturielso Ventura Gomes",
             "value": 2
         },
         {
-            "text": "Joanne Elizabeth Costa",
+            "text": "Werton Medeiros ",
             "value": 2
+        },
+        {
+            "text": "Francisco Rasiah",
+            "value": 2
+        },
+        {
+            "text": "Flavia Cristina N Ribeiro",
+            "value": 1
+        },
+        {
+            "text": "Joanne Elizabeth Costa",
+            "value": 1
         },
         {
             "text": "Amanda da Silva Brito",
             "value": 1
         },
         {
-            "text": "José Givaldo Melquiades",
+            "text": "Bianca Leite Morais",
             "value": 1
         },
         {
@@ -93,7 +101,7 @@
             "value": 1
         },
         {
-            "text": "Bianca Leite Morais",
+            "text": "José Givaldo Melquiades",
             "value": 1
         },
         {
@@ -113,55 +121,11 @@
             "value": 1
         },
         {
-            "text": "Wanessa Carvalho",
-            "value": 1
-        },
-        {
-            "text": "Samara Araujo de Bulhões",
-            "value": 1
-        },
-        {
-            "text": "Marcelo de Morais Rosendo",
-            "value": 1
-        },
-        {
-            "text": "Roberta Tavares de Barreto",
+            "text": "Ana Diva de Sá Nóbrega ",
             "value": 1
         },
         {
             "text": "Ana Lucia de Medeiros",
-            "value": 1
-        },
-        {
-            "text": "Andressa Carvalho",
-            "value": 1
-        },
-        {
-            "text": "Rodrigo Nascimento de Farias",
-            "value": 1
-        },
-        {
-            "text": "Marília Maroja Ribeiro",
-            "value": 1
-        },
-        {
-            "text": "Jeanne Sandra Nogueira ",
-            "value": 1
-        },
-        {
-            "text": "Catarina Ferreira Gadelha",
-            "value": 1
-        },
-        {
-            "text": "Isabela Fernandes Scabello ",
-            "value": 1
-        },
-        {
-            "text": "Francisco Bernadino ",
-            "value": 1
-        },
-        {
-            "text": "Fátima Elizabeth Negri",
             "value": 1
         },
         {
@@ -173,7 +137,39 @@
             "value": 1
         },
         {
+            "text": "Rodrigo Nascimento de Farias",
+            "value": 1
+        },
+        {
+            "text": "Wanessa Carvalho",
+            "value": 1
+        },
+        {
+            "text": "Samara Araujo de Bulhões",
+            "value": 1
+        },
+        {
+            "text": "Jeanne Sandra Nogueira ",
+            "value": 1
+        },
+        {
+            "text": "Andressa Carvalho",
+            "value": 1
+        },
+        {
             "text": "Barbara Vilhena Montenegro",
+            "value": 1
+        },
+        {
+            "text": "Roberta Tavares de Barreto",
+            "value": 1
+        },
+        {
+            "text": "Marcelo de Morais Rosendo",
+            "value": 1
+        },
+        {
+            "text": "Isabela Fernandes Scabello ",
             "value": 1
         },
         {
@@ -181,15 +177,31 @@
             "value": 1
         },
         {
+            "text": "Marília Maroja Ribeiro",
+            "value": 1
+        },
+        {
+            "text": "Catarina Ferreira Gadelha",
+            "value": 1
+        },
+        {
+            "text": "Ilka de Castro",
+            "value": 1
+        },
+        {
+            "text": "Francisco Bernadino ",
+            "value": 1
+        },
+        {
+            "text": "Fátima Elizabeth Negri",
+            "value": 1
+        },
+        {
             "text": "Rafael Freire de Lira Sobral",
             "value": 1
         },
         {
-            "text": "Anne Karinini Silva Gama ",
-            "value": 1
-        },
-        {
-            "text": "Ana Maria Ramos",
+            "text": "Lorena Souza dos Santos Lima ",
             "value": 1
         },
         {
@@ -197,19 +209,11 @@
             "value": 1
         },
         {
-            "text": "Fabricia Santos Silva",
+            "text": "Ana Maria Ramos",
             "value": 1
         },
         {
-            "text": "Rômulo",
-            "value": 1
-        },
-        {
-            "text": "Louyse Jerônimo",
-            "value": 1
-        },
-        {
-            "text": "Mariá Queiroz de Queiroz",
+            "text": "Anne Karinini Silva Gama ",
             "value": 1
         },
         {
@@ -217,7 +221,23 @@
             "value": 1
         },
         {
-            "text": "Lorena Souza dos Santos Lima ",
+            "text": "Rômulo",
+            "value": 1
+        },
+        {
+            "text": "Sérgio dos Santos ",
+            "value": 1
+        },
+        {
+            "text": "Mariá Queiroz de Queiroz",
+            "value": 1
+        },
+        {
+            "text": "Louyse Jerônimo",
+            "value": 1
+        },
+        {
+            "text": "Fabricia Santos Silva",
             "value": 1
         },
         {
@@ -226,6 +246,10 @@
         },
         {
             "text": "Amanda Thaise de Souza ",
+            "value": 1
+        },
+        {
+            "text": "Matheus Alves Xavier",
             "value": 1
         },
         {
@@ -245,7 +269,11 @@
             "value": 1
         },
         {
-            "text": "Luanna Nascimento de Azevedo",
+            "text": "Mamá",
+            "value": 1
+        },
+        {
+            "text": "Priscila USOT",
             "value": 1
         },
         {
@@ -253,7 +281,7 @@
             "value": 1
         },
         {
-            "text": "Priscila USOT",
+            "text": "Luanna Nascimento de Azevedo",
             "value": 1
         },
         {
@@ -265,19 +293,15 @@
             "value": 1
         },
         {
-            "text": "Mamá",
-            "value": 1
-        },
-        {
             "text": "Ana Beatriz Gondim Dantas ",
             "value": 1
         },
         {
-            "text": "Marcos André Lima",
+            "text": "Luiz A M P Lima Lugo",
             "value": 1
         },
         {
-            "text": "Luiz A M P Lima Lugo",
+            "text": "Marcos André Lima",
             "value": 1
         },
         {
@@ -289,25 +313,28 @@
             "value": 1
         },
         {
-            "text": "João Victor Pinto de Menezes ",
-            "value": 1
-        },
-        {
             "text": "João Ricardo Nascimento ",
             "value": 1
         },
         {
-            "text": "Matheus Macedo",
+            "text": "João Victor Pinto de Menezes ",
             "value": 1
         },
         {
             "text": "Matheus Mendes  Santana ",
+            "value": 1
+        },
+        {
+            "text": "Matheus Macedo",
             "value": 1
         }
     ],
     "topDonors": [
         {
             "name": "Karina Maria Azevedo Bringel"
+        },
+        {
+            "name": "André Telis Vilela"
         },
         {
             "name": "Jacicarlos Lima de Alencar"
@@ -317,6 +344,9 @@
         },
         {
             "name": "Amanda Raphaella M. Lima"
+        },
+        {
+            "name": "Estácio Amaro"
         },
         {
             "name": "José Eymard Moraes de Medeiros"
@@ -329,15 +359,27 @@
         },
         {
             "name": "Alessandra de Souza Braz "
-        },
-        {
-            "name": "Monica Janine Freitas"
-        },
-        {
-            "name": "Eduardo Henrique Lima Batista "
         }
     ],
     "latestDonations": [
+        {
+            "name": "Estácio Amaro"
+        },
+        {
+            "name": "André Telis Vilela"
+        },
+        {
+            "name": "Matheus Alves Xavier"
+        },
+        {
+            "name": "Sérgio dos Santos "
+        },
+        {
+            "name": "Ilka de Castro"
+        },
+        {
+            "name": "Ana Diva de Sá Nóbrega "
+        },
         {
             "name": "Catarina Ferreira Gadelha"
         },
@@ -349,24 +391,6 @@
         },
         {
             "name": "Jeanne Sandra Nogueira "
-        },
-        {
-            "name": "Thaís Benevides "
-        },
-        {
-            "name": "Joanne Elizabeth Costa"
-        },
-        {
-            "name": "Werton Medeiros "
-        },
-        {
-            "name": "Marília Maroja Ribeiro"
-        },
-        {
-            "name": "Alessandra de Souza Braz "
-        },
-        {
-            "name": "Amanda da Silva Brito"
         }
     ]
 }
