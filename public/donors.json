@@ -13,7 +13,7 @@
             "value": 4
         },
         {
-            "text": "Estácio Amaro",
+            "text": "Alex Tirbutino Meira",
             "value": 4
         },
         {
@@ -21,15 +21,11 @@
             "value": 3
         },
         {
-            "text": "Thaís Benevides ",
-            "value": 3
-        },
-        {
             "text": "José Eymard Moraes de Medeiros",
             "value": 3
         },
         {
-            "text": "Alex Tirbutino Meira",
+            "text": "Estácio Amaro",
             "value": 3
         },
         {
@@ -37,7 +33,11 @@
             "value": 3
         },
         {
-            "text": "Alessandra de Souza Braz ",
+            "text": "Thaís Benevides ",
+            "value": 3
+        },
+        {
+            "text": "Alessandra Braz",
             "value": 3
         },
         {
@@ -45,7 +45,19 @@
             "value": 2
         },
         {
+            "text": "Alessandra de Souza Braz ",
+            "value": 2
+        },
+        {
+            "text": "Francisco Rasiah",
+            "value": 2
+        },
+        {
             "text": "Gabriel Targueta",
+            "value": 2
+        },
+        {
+            "text": "Flavia Cristina N Ribeiro",
             "value": 2
         },
         {
@@ -70,30 +82,14 @@
         },
         {
             "text": "Venturielso Ventura Gomes",
-            "value": 2
+            "value": 1
         },
         {
             "text": "Werton Medeiros ",
-            "value": 2
-        },
-        {
-            "text": "Francisco Rasiah",
-            "value": 2
-        },
-        {
-            "text": "Flavia Cristina N Ribeiro",
             "value": 1
         },
         {
             "text": "Joanne Elizabeth Costa",
-            "value": 1
-        },
-        {
-            "text": "Amanda da Silva Brito",
-            "value": 1
-        },
-        {
-            "text": "Bianca Leite Morais",
             "value": 1
         },
         {
@@ -102,6 +98,14 @@
         },
         {
             "text": "José Givaldo Melquiades",
+            "value": 1
+        },
+        {
+            "text": "Amanda da Silva Brito",
+            "value": 1
+        },
+        {
+            "text": "Bianca Leite Morais",
             "value": 1
         },
         {
@@ -117,7 +121,15 @@
             "value": 1
         },
         {
-            "text": "Albm Serviços Medicos",
+            "text": "Ana Lucia de Medeiros",
+            "value": 1
+        },
+        {
+            "text": "Barbara Vilhena Montenegro",
+            "value": 1
+        },
+        {
+            "text": "Andressa Carvalho",
             "value": 1
         },
         {
@@ -125,7 +137,7 @@
             "value": 1
         },
         {
-            "text": "Ana Lucia de Medeiros",
+            "text": "Albm Serviços Medicos",
             "value": 1
         },
         {
@@ -133,7 +145,7 @@
             "value": 1
         },
         {
-            "text": "Bianca Lucas Fernandes",
+            "text": "Catarina Ferreira Gadelha",
             "value": 1
         },
         {
@@ -153,11 +165,11 @@
             "value": 1
         },
         {
-            "text": "Andressa Carvalho",
+            "text": "Ilka de Castro",
             "value": 1
         },
         {
-            "text": "Barbara Vilhena Montenegro",
+            "text": "Bianca Lucas Fernandes",
             "value": 1
         },
         {
@@ -181,15 +193,7 @@
             "value": 1
         },
         {
-            "text": "Catarina Ferreira Gadelha",
-            "value": 1
-        },
-        {
-            "text": "Ilka de Castro",
-            "value": 1
-        },
-        {
-            "text": "Francisco Bernadino ",
+            "text": "Eduardo Dib",
             "value": 1
         },
         {
@@ -197,7 +201,15 @@
             "value": 1
         },
         {
+            "text": "Francisco Bernadino ",
+            "value": 1
+        },
+        {
             "text": "Rafael Freire de Lira Sobral",
+            "value": 1
+        },
+        {
+            "text": "Ana Maria Ramos",
             "value": 1
         },
         {
@@ -209,7 +221,7 @@
             "value": 1
         },
         {
-            "text": "Ana Maria Ramos",
+            "text": "Diogo Cordeiro Alves ",
             "value": 1
         },
         {
@@ -241,7 +253,7 @@
             "value": 1
         },
         {
-            "text": "Diogo Cordeiro Alves ",
+            "text": "Eduardo Modesto ",
             "value": 1
         },
         {
@@ -261,7 +273,7 @@
             "value": 1
         },
         {
-            "text": "Luis Eduardo Negreiros Assunção",
+            "text": "Diego Felipe Amarantes",
             "value": 1
         },
         {
@@ -269,7 +281,7 @@
             "value": 1
         },
         {
-            "text": "Mamá",
+            "text": "Luis Eduardo Negreiros Assunção",
             "value": 1
         },
         {
@@ -277,7 +289,7 @@
             "value": 1
         },
         {
-            "text": "Ruth Maria Mendonça ",
+            "text": "Mamá",
             "value": 1
         },
         {
@@ -285,11 +297,11 @@
             "value": 1
         },
         {
-            "text": "Diego Felipe Amarantes",
+            "text": "Laura Lissa Soares",
             "value": 1
         },
         {
-            "text": "Laura Lissa Soares",
+            "text": "Ruth Maria Mendonça ",
             "value": 1
         },
         {
@@ -358,10 +370,19 @@
             "name": "Thaís Benevides "
         },
         {
-            "name": "Alessandra de Souza Braz "
+            "name": "Alessandra Braz"
         }
     ],
     "latestDonations": [
+        {
+            "name": "Eduardo Modesto "
+        },
+        {
+            "name": "Eduardo Dib"
+        },
+        {
+            "name": "Alessandra Braz"
+        },
         {
             "name": "Estácio Amaro"
         },
@@ -382,15 +403,6 @@
         },
         {
             "name": "Catarina Ferreira Gadelha"
-        },
-        {
-            "name": "Monica Janine Freitas"
-        },
-        {
-            "name": "Diego Felipe Amarantes"
-        },
-        {
-            "name": "Jeanne Sandra Nogueira "
         }
     ]
 }
