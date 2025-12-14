@@ -13,11 +13,11 @@
             "value": 4
         },
         {
-            "text": "Jacicarlos Lima de Alencar",
+            "text": "Constantino Giovanni Braga Cartaxo",
             "value": 4
         },
         {
-            "text": "Constantino Giovanni Braga Cartaxo",
+            "text": "Jacicarlos Lima de Alencar",
             "value": 3
         },
         {
@@ -29,16 +29,20 @@
             "value": 3
         },
         {
-            "text": "Alex Tiburtino Meira",
-            "value": 3
-        },
-        {
             "text": "Ricardo Vieira Santos",
             "value": 3
         },
         {
-            "text": "Eduardo Gomes",
+            "text": "Alex Tiburtino Meira",
             "value": 3
+        },
+        {
+            "text": "Aureliana Barboza Silva",
+            "value": 3
+        },
+        {
+            "text": "Eduardo Gomes",
+            "value": 2
         },
         {
             "text": "Estacio Amaro da Silva Jr",
@@ -61,11 +65,11 @@
             "value": 2
         },
         {
-            "text": "Amanda Raphaella M. Lima",
+            "text": "Alexandre Rolim da Paz",
             "value": 2
         },
         {
-            "text": "Alexandre Rolim da Paz",
+            "text": "Amanda Raphaella M. Lima",
             "value": 2
         },
         {
@@ -78,7 +82,7 @@
         },
         {
             "text": "José Eymard Moraes de Medeiros",
-            "value": 2
+            "value": 1
         },
         {
             "text": "Juliane Dornelas Lucio",
@@ -169,7 +173,7 @@
             "value": 1
         },
         {
-            "text": "Alexandre Medeiros Figueiredo",
+            "text": "Alfredo Jose Minervino",
             "value": 1
         },
         {
@@ -193,7 +197,7 @@
             "value": 1
         },
         {
-            "text": "Alfredo Jose Minervino",
+            "text": "Alexandre Medeiros Figueiredo",
             "value": 1
         },
         {
@@ -341,11 +345,11 @@
             "value": 1
         },
         {
-            "text": "Andressa Carvalho",
+            "text": "Ana Flavia Silva Amorim Arruda",
             "value": 1
         },
         {
-            "text": "Arthur Vinicius de Oliveira",
+            "text": "Beatriz Gadelha e Xavier",
             "value": 1
         },
         {
@@ -389,7 +393,7 @@
             "value": 1
         },
         {
-            "text": "André Luís Celestino Ferreira",
+            "text": "Andressa Carvalho",
             "value": 1
         },
         {
@@ -409,11 +413,11 @@
             "value": 1
         },
         {
-            "text": "Ana Luiza Rabelo Rolim",
+            "text": "André Luís Celestino Ferreira",
             "value": 1
         },
         {
-            "text": "Ana Flavia Silva Amorim Arruda",
+            "text": "Ana Lucia de Medeiros",
             "value": 1
         },
         {
@@ -425,7 +429,7 @@
             "value": 1
         },
         {
-            "text": "Beatriz Gadelha e Xavier",
+            "text": "Arthur Vinicius de Oliveira",
             "value": 1
         },
         {
@@ -437,19 +441,19 @@
             "value": 1
         },
         {
-            "text": "Albm Serviços Medicos",
-            "value": 1
-        },
-        {
             "text": "Alice Placido",
             "value": 1
         },
         {
-            "text": "Ana Lucia de Medeiros",
+            "text": "Alvaro F L Junior",
             "value": 1
         },
         {
-            "text": "Alvaro F L Junior",
+            "text": "Ana Luiza Rabelo Rolim",
+            "value": 1
+        },
+        {
+            "text": "Albm Serviços Medicos",
             "value": 1
         },
         {
@@ -593,7 +597,7 @@
             "value": 1
         },
         {
-            "text": "Adila Roberta R. Sampaio",
+            "text": "Alberto F Félix Paredes",
             "value": 1
         },
         {
@@ -629,11 +633,11 @@
             "value": 1
         },
         {
-            "text": "Alberto F Félix Paredes",
+            "text": "Abraão Brito Lira Beltrão Filho",
             "value": 1
         },
         {
-            "text": "Abraão Brito Lira Beltrão Filho",
+            "text": "Adila Roberta R. Sampaio",
             "value": 1
         },
         {
@@ -999,6 +1003,9 @@
     ],
     "latestDonations": [
         {
+            "name": "Aureliana Barboza Silva"
+        },
+        {
             "name": "Constantino Giovanni Braga Cartaxo"
         },
         {
@@ -1024,9 +1031,6 @@
         },
         {
             "name": "Rivando Rodrigues de Souza"
-        },
-        {
-            "name": "Gizzele Barcellos Damazio"
         }
     ]
 }
