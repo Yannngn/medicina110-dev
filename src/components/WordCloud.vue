@@ -62,18 +62,28 @@ onUnmounted(() => {
   }
 });
 
-const props = defineProps<{
-  words: { text: string; value: number }[];
-}>();
+const props = withDefaults(
+  defineProps<{
+    limit?: number;
+    words: { text: string; value: number }[];
+  }>(),
+  {
+    limit: 90,
+  }
+);
 
 const wordCloud = computed(() => {
   if (!props.words || props.words.length === 0) {
     return [];
   }
-  if (Array.isArray(props.words[0])) {
-    return props.words;
+  
+  // Limit the number of words for better performance
+  const limitedWords = props.words.slice(0, props.limit);
+  
+  if (Array.isArray(limitedWords[0])) {
+    return limitedWords;
   }
-  return props.words.map((word) => [word.text, word.value]);
+  return limitedWords.map((word) => [word.text, word.value]);
 });
 
 // const colorFn = ([text, _weight]: [string, number]) => {

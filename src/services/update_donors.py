@@ -1,5 +1,6 @@
 import json
 import os
+import unicodedata
 
 import gspread
 import pandas as pd
@@ -97,6 +98,25 @@ def main():
             if col in df.columns and df[col].dtype in ["object", str, "string"]:
                 df = df[df[col].astype(str).str.strip() != ""]
 
+        # Normaliza os nomes para garantir que variações sejam tratadas como a mesma pessoa
+        # O nome normalizado é usado apenas internamente para agregação
+        # O nome original mais recente será usado para exibição
+        def normalize_name(name: str) -> str:
+            """Normaliza um nome removendo acentos e padronizando formato."""
+            # Normaliza unicode (NFD = decompõe caracteres acentuados)
+            normalized = unicodedata.normalize("NFD", name)
+            # Remove marcas diacríticas (acentos)
+            ascii_name = "".join(
+                char for char in normalized if unicodedata.category(char) != "Mn"
+            )
+            # Remove espaços extras, converte para maiúsculas
+            return " ".join(ascii_name.upper().split())
+
+        # Cria coluna com nome normalizado para agregação (uso interno)
+        df["NomeNormalizado"] = df["Nome"].astype(str).str.strip().apply(normalize_name)
+        # Mantém o nome original para exibição
+        df["Nome"] = df["Nome"].astype(str).str.strip()
+
         # Converte 'Valor' para numérico, tratando erros
         df["Valor"] = pd.to_numeric(
             df["Valor"].astype(str).str.replace(".", "").replace(",", "."),
@@ -129,12 +149,19 @@ def main():
             return
 
         # --- 3. PROCESSAMENTO E AGREGAÇÃO ---
-        # Agrega doações pelo nome do doador para somar os valores totais
-        # Remove a coluna 'Carimbo de data/hora' antes de agregar
-        donors_no_timestamp = df.drop(columns=["Carimbo de data/hora"])
-        aggregated_donors: pd.DataFrame = donors_no_timestamp.groupby(
-            "Nome", as_index=False
-        ).sum()  # type: ignore
+        # Ordena por data para garantir que o nome mais recente seja preservado
+        df = df.sort_values(by="Carimbo de data/hora", ascending=True)
+
+        # Agrega doações pelo nome normalizado para somar os valores totais
+        # Usa o nome original mais recente para exibição
+        aggregated_donors: pd.DataFrame = df.groupby(
+            "NomeNormalizado", as_index=False
+        ).agg(
+            {
+                "Nome": "last",  # Pega o nome original da doação mais recente
+                "Valor": "sum",  # Soma todos os valores
+            }
+        )
 
         print(f"Foram encontrados {len(aggregated_donors)} doadores únicos.")
 
