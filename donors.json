@@ -13,11 +13,11 @@
             "value": 4
         },
         {
-            "text": "Constantino Giovanni Braga Cartaxo",
+            "text": "Jacicarlos Lima de Alencar",
             "value": 4
         },
         {
-            "text": "Jacicarlos Lima de Alencar",
+            "text": "Constantino Giovanni Braga Cartaxo",
             "value": 3
         },
         {
@@ -25,27 +25,23 @@
             "value": 3
         },
         {
-            "text": "Marcelo Dantas Tavares ",
+            "text": "Marcelo Dantas Tavares",
             "value": 3
         },
         {
-            "text": "Ricardo Vieira Santos ",
+            "text": "Alex Tiburtino Meira",
             "value": 3
         },
         {
-            "text": "Alex Tiburtino Meira ",
+            "text": "Ricardo Vieira Santos",
             "value": 3
         },
         {
-            "text": "Daniel de Albuquerque Rangel ",
+            "text": "Eduardo Gomes",
             "value": 3
         },
         {
-            "text": "Eduardo Gomes ",
-            "value": 2
-        },
-        {
-            "text": "Gabriella Barreto Soares ",
+            "text": "Estacio Amaro da Silva Jr",
             "value": 2
         },
         {
@@ -53,7 +49,7 @@
             "value": 2
         },
         {
-            "text": "Juliane Dornelas Lucio ",
+            "text": "Gabriella Barreto Soares",
             "value": 2
         },
         {
@@ -61,11 +57,7 @@
             "value": 2
         },
         {
-            "text": "Estacio Amaro da Silva Jr",
-            "value": 2
-        },
-        {
-            "text": "Alexandre Rolim da Paz ",
+            "text": "Daniel de Albuquerque Rangel",
             "value": 2
         },
         {
@@ -73,7 +65,11 @@
             "value": 2
         },
         {
-            "text": "Joacilda da Conceição Nunes ",
+            "text": "Alexandre Rolim da Paz",
+            "value": 2
+        },
+        {
+            "text": "Joacilda da Conceição Nunes",
             "value": 2
         },
         {
@@ -82,18 +78,18 @@
         },
         {
             "text": "José Eymard Moraes de Medeiros",
+            "value": 2
+        },
+        {
+            "text": "Juliane Dornelas Lucio",
             "value": 1
         },
         {
-            "text": "Thaís Benevides ",
+            "text": "Valderez Araujo L Ramos",
             "value": 1
         },
         {
-            "text": "Valderez Araujo L Ramos ",
-            "value": 1
-        },
-        {
-            "text": "Priscilla Magalhães Nunes ",
+            "text": "Thaís Benevides",
             "value": 1
         },
         {
@@ -101,43 +97,19 @@
             "value": 1
         },
         {
-            "text": "Gabriel Braz Garcia ",
+            "text": "Priscilla Magalhães Nunes",
             "value": 1
         },
         {
-            "text": "Iselena Claudino Bernardes ",
+            "text": "Iselena Claudino Bernardes",
             "value": 1
         },
         {
-            "text": "Jeanille Seixas Xavier Abrantes Diniz",
+            "text": "Gabriel Braz Garcia",
             "value": 1
         },
         {
-            "text": "Paula Bezerra de Araujo ",
-            "value": 1
-        },
-        {
-            "text": "MANUELLA DE SOUSA TOLEDO MATIAS ",
-            "value": 1
-        },
-        {
-            "text": "Fernanda Lima Correia ",
-            "value": 1
-        },
-        {
-            "text": "Alessandra de Souza Braz ",
-            "value": 1
-        },
-        {
-            "text": "Gabriela Matos Falcão ",
-            "value": 1
-        },
-        {
-            "text": "Pablo Rodrigues C. Alves ",
-            "value": 1
-        },
-        {
-            "text": "Maria Roberta Melo Pereira ",
+            "text": "Gizzele Barcellos Damazio",
             "value": 1
         },
         {
@@ -145,15 +117,35 @@
             "value": 1
         },
         {
-            "text": "Gizzele Barcellos Damazio ",
+            "text": "Fernanda Lima Correia",
             "value": 1
         },
         {
-            "text": "Juliane Pinto dos Santos ",
+            "text": "Jeanille Seixas Xavier Abrantes Diniz",
             "value": 1
         },
         {
-            "text": "Mario Vasconcelos ",
+            "text": "Alessandra de Souza Braz",
+            "value": 1
+        },
+        {
+            "text": "Pablo Rodrigues C. Alves",
+            "value": 1
+        },
+        {
+            "text": "MANUELLA DE SOUSA TOLEDO MATIAS",
+            "value": 1
+        },
+        {
+            "text": "Maria Roberta Melo Pereira",
+            "value": 1
+        },
+        {
+            "text": "Paula Bezerra de Araujo",
+            "value": 1
+        },
+        {
+            "text": "Gabriela Matos Falcão",
             "value": 1
         },
         {
@@ -161,15 +153,23 @@
             "value": 1
         },
         {
-            "text": "Eduardo Henrique Lima Batista ",
+            "text": "Mario Vasconcelos",
             "value": 1
         },
         {
-            "text": "Fernando Jorge F Nobrega ",
+            "text": "Juliane Pinto dos Santos",
             "value": 1
         },
         {
-            "text": "Alfredo Jose Minervino ",
+            "text": "Fabyan Esberard de Lima",
+            "value": 1
+        },
+        {
+            "text": "Ana Cláudia S. Penazzi",
+            "value": 1
+        },
+        {
+            "text": "Alexandre Medeiros Figueiredo",
             "value": 1
         },
         {
@@ -177,43 +177,47 @@
             "value": 1
         },
         {
+            "text": "Fernando Jorge F Nobrega",
+            "value": 1
+        },
+        {
             "text": "Flavia Cristina N Ribeiro",
             "value": 1
         },
         {
-            "text": "Fabyan Esberard de Lima ",
+            "text": "Flavia Mesquita Carvalho",
             "value": 1
         },
         {
-            "text": "Flavia Mesquita Carvalho ",
+            "text": "Eduardo Henrique Lima Batista",
             "value": 1
         },
         {
-            "text": "Francisco Rasiah",
+            "text": "Alfredo Jose Minervino",
             "value": 1
         },
         {
-            "text": "Ana Cláudia S. Penazzi ",
+            "text": "Rene Queiroga Barbosa",
             "value": 1
         },
         {
-            "text": "Alexandre Medeiros Figueiredo ",
+            "text": "Sabina Bastos Maia",
             "value": 1
         },
         {
-            "text": "Rene Queiroga Barbosa ",
+            "text": "Venturielso Ventura Gomes",
             "value": 1
         },
         {
-            "text": "Roberto Mendes dos Santos ",
+            "text": "Lautonio Junior Carlos Loureiro",
             "value": 1
         },
         {
-            "text": "Lautonio Junior Carlos Loureiro ",
+            "text": "Maria Angelina Cartaxo",
             "value": 1
         },
         {
-            "text": "Julio Cavalcanti de Oliveira ",
+            "text": "Julio Cavalcanti de Oliveira",
             "value": 1
         },
         {
@@ -221,15 +225,11 @@
             "value": 1
         },
         {
-            "text": "Maria Angelina Cartaxo ",
+            "text": "Priscila Magalhaes Nunes",
             "value": 1
         },
         {
-            "text": "Paulo R. da Silva Lima ",
-            "value": 1
-        },
-        {
-            "text": "Priscila Magalhaes Nunes ",
+            "text": "Paulo R. da Silva Lima",
             "value": 1
         },
         {
@@ -245,23 +245,19 @@
             "value": 1
         },
         {
-            "text": "Sabina Bastos Maia",
+            "text": "Francisco Rasiah",
             "value": 1
         },
         {
-            "text": "Venturielso Ventura Gomes",
+            "text": "Werton Medeiros",
             "value": 1
         },
         {
-            "text": "Werton Medeiros ",
+            "text": "Roberto Mendes dos Santos",
             "value": 1
         },
         {
-            "text": "Danilo da Silva Ferreia ",
-            "value": 1
-        },
-        {
-            "text": "Bianca Leite Morais",
+            "text": "Danilo da Silva Ferreia",
             "value": 1
         },
         {
@@ -269,23 +265,23 @@
             "value": 1
         },
         {
+            "text": "Laryssa Renta Muniz Rocha",
+            "value": 1
+        },
+        {
             "text": "José Givaldo Melquiades",
             "value": 1
         },
         {
-            "text": "Luana Nascimento da Silveira ",
+            "text": "Márcio Murilo Pereira Vieira",
             "value": 1
         },
         {
-            "text": "Marcelo H. Carvalho Souza ",
+            "text": "Marcelo H. Carvalho Souza",
             "value": 1
         },
         {
-            "text": "Rivando Rodrigues de Souza ",
-            "value": 1
-        },
-        {
-            "text": "Laryssa Renta Muniz Rocha ",
+            "text": "Luana Nascimento da Silveira",
             "value": 1
         },
         {
@@ -293,7 +289,11 @@
             "value": 1
         },
         {
-            "text": "Márcio Murilo Pereira Vieira ",
+            "text": "Rivando Rodrigues de Souza",
+            "value": 1
+        },
+        {
+            "text": "Bianca Leite Morais",
             "value": 1
         },
         {
@@ -301,7 +301,7 @@
             "value": 1
         },
         {
-            "text": "Fernando Antônio Dias Neto ",
+            "text": "Fernando Antônio Dias Neto",
             "value": 1
         },
         {
@@ -309,19 +309,15 @@
             "value": 1
         },
         {
-            "text": "Levy de Macedo Lira ",
+            "text": "Levy de Macedo Lira",
             "value": 1
         },
         {
-            "text": "Sandra Rejane Cabral Batista ",
+            "text": "Sandra Rejane Cabral Batista",
             "value": 1
         },
         {
-            "text": "Roberta Tavares de Barreto",
-            "value": 1
-        },
-        {
-            "text": "Onedilva Travasssos M Lima ",
+            "text": "Onedilva Travasssos M Lima",
             "value": 1
         },
         {
@@ -329,27 +325,7 @@
             "value": 1
         },
         {
-            "text": "Ingra Ellen Menezes Rufino ",
-            "value": 1
-        },
-        {
-            "text": "Janaina Japiassu ",
-            "value": 1
-        },
-        {
-            "text": "Jeanne Sandra Nogueira ",
-            "value": 1
-        },
-        {
-            "text": "Jessica Laureano Martins ",
-            "value": 1
-        },
-        {
-            "text": "Arthur Vinicius de Oliveira ",
-            "value": 1
-        },
-        {
-            "text": "André Luís Celestino Ferreira",
+            "text": "Janaina Japiassu",
             "value": 1
         },
         {
@@ -357,15 +333,27 @@
             "value": 1
         },
         {
-            "text": "Isabela Fernandes Scabello ",
+            "text": "Jessica Laureano Martins",
             "value": 1
         },
         {
-            "text": "Eduardo Dib",
+            "text": "Jeanne Sandra Nogueira",
             "value": 1
         },
         {
-            "text": "Francisco Bernadino ",
+            "text": "Andressa Carvalho",
+            "value": 1
+        },
+        {
+            "text": "Arthur Vinicius de Oliveira",
+            "value": 1
+        },
+        {
+            "text": "Isabela Fernandes Scabello",
+            "value": 1
+        },
+        {
+            "text": "Ingra Ellen Menezes Rufino",
             "value": 1
         },
         {
@@ -377,11 +365,19 @@
             "value": 1
         },
         {
-            "text": "Eduardo C Dantas Franca ",
+            "text": "Francisco Bernadino",
             "value": 1
         },
         {
-            "text": "Emily Loren Queiroz Bezerra ",
+            "text": "Danielle Christinne Soares",
+            "value": 1
+        },
+        {
+            "text": "Emily Loren Queiroz Bezerra",
+            "value": 1
+        },
+        {
+            "text": "Eduardo Dib",
             "value": 1
         },
         {
@@ -389,15 +385,15 @@
             "value": 1
         },
         {
-            "text": "Danielle Christinne Soares ",
+            "text": "Eduardo C Dantas Franca",
             "value": 1
         },
         {
-            "text": "Rodrigo Nascimento de Farias",
+            "text": "André Luís Celestino Ferreira",
             "value": 1
         },
         {
-            "text": "Caio Escarião ",
+            "text": "Roberta Tavares de Barreto",
             "value": 1
         },
         {
@@ -405,7 +401,7 @@
             "value": 1
         },
         {
-            "text": "Celio RIbeiro Araujo ",
+            "text": "Catarina Ferreira Gadelha",
             "value": 1
         },
         {
@@ -413,11 +409,7 @@
             "value": 1
         },
         {
-            "text": "Andressa Carvalho",
-            "value": 1
-        },
-        {
-            "text": "Ana Lucia de Medeiros",
+            "text": "Ana Luiza Rabelo Rolim",
             "value": 1
         },
         {
@@ -425,7 +417,7 @@
             "value": 1
         },
         {
-            "text": "Beatriz Gadelha e Xavier ",
+            "text": "Ana Diva de Sá Nóbrega",
             "value": 1
         },
         {
@@ -433,23 +425,15 @@
             "value": 1
         },
         {
-            "text": "Catarina Ferreira Gadelha",
+            "text": "Beatriz Gadelha e Xavier",
             "value": 1
         },
         {
-            "text": "Ana Luiza Rabelo Rolim ",
+            "text": "Caio Escarião",
             "value": 1
         },
         {
-            "text": "Alvaro F L Junior ",
-            "value": 1
-        },
-        {
-            "text": "Alice Placido ",
-            "value": 1
-        },
-        {
-            "text": "Ana Diva de Sá Nóbrega ",
+            "text": "Celio RIbeiro Araujo",
             "value": 1
         },
         {
@@ -457,11 +441,23 @@
             "value": 1
         },
         {
+            "text": "Alice Placido",
+            "value": 1
+        },
+        {
+            "text": "Ana Lucia de Medeiros",
+            "value": 1
+        },
+        {
+            "text": "Alvaro F L Junior",
+            "value": 1
+        },
+        {
             "text": "Samara Araujo de Bulhões",
             "value": 1
         },
         {
-            "text": "Thamiris Miranda Granja ",
+            "text": "Thamiris Miranda Granja",
             "value": 1
         },
         {
@@ -469,75 +465,15 @@
             "value": 1
         },
         {
-            "text": "Vanessa Araújo Alves ",
+            "text": "Vanessa Araújo Alves",
             "value": 1
         },
         {
-            "text": "Talita R Mendoza Alencar ",
+            "text": "Talita R Mendoza Alencar",
             "value": 1
         },
         {
-            "text": "Shirlane F. Malheiros ",
-            "value": 1
-        },
-        {
-            "text": "Marcelo Salles Pastor Proença Pereira",
-            "value": 1
-        },
-        {
-            "text": "Maisa Freire Cartaxo Pires de Sá ",
-            "value": 1
-        },
-        {
-            "text": "Maria das Graças Azevedo Diniz",
-            "value": 1
-        },
-        {
-            "text": "Luana Dias Santiago ",
-            "value": 1
-        },
-        {
-            "text": "Luciene S Assis Tafuri ",
-            "value": 1
-        },
-        {
-            "text": "Lafayette Cavalcanti Bezerra",
-            "value": 1
-        },
-        {
-            "text": "Lauro Pires Xavier Bisneto ",
-            "value": 1
-        },
-        {
-            "text": "João Batista Virgulino ",
-            "value": 1
-        },
-        {
-            "text": "Walber Thadeu de Melo Freire ",
-            "value": 1
-        },
-        {
-            "text": "Veriana M Nóbrega ",
-            "value": 1
-        },
-        {
-            "text": "Priscilla Anny A. Alves",
-            "value": 1
-        },
-        {
-            "text": "Mateus Andrade Coelho ",
-            "value": 1
-        },
-        {
-            "text": "Nara Nobrega Crispim",
-            "value": 1
-        },
-        {
-            "text": "Melina Pereira Fernandes ",
-            "value": 1
-        },
-        {
-            "text": "Maria Clara D'Oliveira ",
+            "text": "Shirlane F. Malheiros",
             "value": 1
         },
         {
@@ -545,47 +481,119 @@
             "value": 1
         },
         {
+            "text": "Luciene S Assis Tafuri",
+            "value": 1
+        },
+        {
+            "text": "Maria das Graças Azevedo Diniz",
+            "value": 1
+        },
+        {
+            "text": "Marcelo Salles Pastor Proença Pereira",
+            "value": 1
+        },
+        {
+            "text": "Maria Clara D'Oliveira",
+            "value": 1
+        },
+        {
+            "text": "Lafayette Cavalcanti Bezerra",
+            "value": 1
+        },
+        {
+            "text": "Lauro Pires Xavier Bisneto",
+            "value": 1
+        },
+        {
+            "text": "João Batista Virgulino",
+            "value": 1
+        },
+        {
+            "text": "Walber Thadeu de Melo Freire",
+            "value": 1
+        },
+        {
+            "text": "Rodrigo Nascimento de Farias",
+            "value": 1
+        },
+        {
+            "text": "Priscilla Anny A. Alves",
+            "value": 1
+        },
+        {
+            "text": "Mateus Andrade Coelho",
+            "value": 1
+        },
+        {
+            "text": "Nara Nobrega Crispim",
+            "value": 1
+        },
+        {
+            "text": "Melina Pereira Fernandes",
+            "value": 1
+        },
+        {
+            "text": "Luana Dias Santiago",
+            "value": 1
+        },
+        {
+            "text": "Maisa Freire Cartaxo Pires de Sá",
+            "value": 1
+        },
+        {
+            "text": "Veriana M Nóbrega",
+            "value": 1
+        },
+        {
             "text": "Rafael Freire de Lira Sobral",
             "value": 1
         },
         {
-            "text": "Carla Christina de Lima ",
+            "text": "Carla Christina de Lima",
             "value": 1
         },
         {
-            "text": "Kaue Kemiac Santos ",
+            "text": "Matheus Macêdo",
             "value": 1
         },
         {
-            "text": "Maxwell de Morais Silva ",
+            "text": "Larissa Cardoso de Figueiredo",
             "value": 1
         },
         {
-            "text": "Matheus L C D Almeida ",
+            "text": "Maxwell de Morais Silva",
             "value": 1
         },
         {
-            "text": "Maíra Valéria Ferreira Chaves ",
+            "text": "Pedro Fernandes Mariz",
             "value": 1
         },
         {
-            "text": "Pedro Fernandes Mariz ",
+            "text": "Pedro Nascimento Araujo Brito",
             "value": 1
         },
         {
-            "text": "Pedro Nascimento Araujo Brito ",
+            "text": "Marilia Denise Barbosa",
             "value": 1
         },
         {
-            "text": "Mariá Queiroz de Queiroz",
+            "text": "Kaue Kemiac Santos",
             "value": 1
         },
         {
-            "text": "Juliana de Melo Figueiredo ",
+            "text": "Bruna Stefanni de Medeiros",
             "value": 1
         },
         {
-            "text": "Bruna Stefanni de Medeiros ",
+            "text": "Bia Medeiros",
+            "value": 1
+        },
+        {
+            "text": "Artemio Jose Araruna Dias",
+            "value": 1
+        },
+        {
+            "text": "Adila Roberta R. Sampaio",
             "value": 1
         },
         {
@@ -593,35 +601,15 @@
             "value": 1
         },
         {
-            "text": "Artemio Jose Araruna Dias ",
+            "text": "Anne Karinini Silva Gama",
             "value": 1
         },
         {
-            "text": "Daniella Jessica Muniz Honorato ",
+            "text": "Daniella Jessica Muniz Honorato",
             "value": 1
         },
         {
-            "text": "Anne Karinini Silva Gama ",
-            "value": 1
-        },
-        {
-            "text": "Bia Medeiros ",
-            "value": 1
-        },
-        {
-            "text": "Eduardo Modesto ",
-            "value": 1
-        },
-        {
-            "text": "Enio Veras Filho ",
-            "value": 1
-        },
-        {
-            "text": "Isabella Araujo Mota ",
-            "value": 1
-        },
-        {
-            "text": "Gabriel Henique Colpes ",
+            "text": "Eduardo Modesto",
             "value": 1
         },
         {
@@ -629,31 +617,39 @@
             "value": 1
         },
         {
-            "text": "Gabriela Martins Costa Dantas ",
+            "text": "Gabriel Henique Colpes",
             "value": 1
         },
         {
-            "text": "Abraão Brito Lira Beltrão Filho ",
+            "text": "Gabriela Martins Costa Dantas",
             "value": 1
         },
         {
-            "text": "Adila Roberta R. Sampaio ",
+            "text": "Isabella Araujo Mota",
             "value": 1
         },
         {
-            "text": "Alberto F Félix Paredes ",
+            "text": "Alberto F Félix Paredes",
             "value": 1
         },
         {
-            "text": "Rebeca Isabel Rodrigues ",
+            "text": "Abraão Brito Lira Beltrão Filho",
             "value": 1
         },
         {
-            "text": "Tatyana Tabosa de Azevedo Braz ",
+            "text": "Mariá Queiroz de Queiroz",
             "value": 1
         },
         {
-            "text": "Taynah de Almeida Melo ",
+            "text": "Matheus L C D Almeida",
+            "value": 1
+        },
+        {
+            "text": "Tatyana Tabosa de Azevedo Braz",
+            "value": 1
+        },
+        {
+            "text": "Taynah de Almeida Melo",
             "value": 1
         },
         {
@@ -665,31 +661,23 @@
             "value": 1
         },
         {
-            "text": "Sérgio dos Santos ",
+            "text": "Sérgio dos Santos",
             "value": 1
         },
         {
-            "text": "Marilia Denise Barbosa ",
+            "text": "Rebeca Isabel Rodrigues",
             "value": 1
         },
         {
-            "text": "Juliana de Moura Leal ",
+            "text": "Juliana de Moura Leal",
             "value": 1
         },
         {
-            "text": "Larissa Cardoso de Figueiredo",
+            "text": "Juliana de Melo Figueiredo",
             "value": 1
         },
         {
-            "text": "Leticia Cordeiro de Melo ",
-            "value": 1
-        },
-        {
-            "text": "Lorenna Marinho Ferreira",
-            "value": 1
-        },
-        {
-            "text": "Lorenna Marinho ",
+            "text": "Maíra Valéria Ferreira Chaves",
             "value": 1
         },
         {
@@ -697,35 +685,47 @@
             "value": 1
         },
         {
+            "text": "Lorenna Marinho",
+            "value": 1
+        },
+        {
+            "text": "Igor Rodrigues Suassuna",
+            "value": 1
+        },
+        {
+            "text": "Enio Veras Filho",
+            "value": 1
+        },
+        {
+            "text": "Diogo Cordeiro Alves",
+            "value": 1
+        },
+        {
+            "text": "Igor Bronzeado",
+            "value": 1
+        },
+        {
             "text": "Fabricia Santos Silva",
             "value": 1
         },
         {
-            "text": "Diogo Cordeiro Alves ",
+            "text": "Maria Carolina Alves Monteiro",
             "value": 1
         },
         {
-            "text": "Igor Rodrigues Suassuna ",
+            "text": "Lorenna Marinho Ferreira",
             "value": 1
         },
         {
-            "text": "Igor Bronzeado ",
+            "text": "Lorena Souza dos Santos Lima",
             "value": 1
         },
         {
-            "text": "Luciano Sales Castelo ",
+            "text": "Luciano Sales Castelo",
             "value": 1
         },
         {
-            "text": "Lorena Souza dos Santos Lima ",
-            "value": 1
-        },
-        {
-            "text": "Maria Carolina Alves Monteiro ",
-            "value": 1
-        },
-        {
-            "text": "Matheus Macêdo ",
+            "text": "Leticia Cordeiro de Melo",
             "value": 1
         },
         {
@@ -733,11 +733,27 @@
             "value": 1
         },
         {
+            "text": "Amanda Thaise de Souza",
+            "value": 1
+        },
+        {
             "text": "Maria Eduarda Regis",
             "value": 1
         },
         {
-            "text": "Amanda Thaise de Souza ",
+            "text": "Emílio Piriz Diniz Neto",
+            "value": 1
+        },
+        {
+            "text": "Camilla Urtiga Guedes",
+            "value": 1
+        },
+        {
+            "text": "João Eudes Moraes de Aguiar",
+            "value": 1
+        },
+        {
+            "text": "João Vinícius de Melo Araujo",
             "value": 1
         },
         {
@@ -745,59 +761,35 @@
             "value": 1
         },
         {
-            "text": "João Vinícius de Melo Araujo ",
+            "text": "Josenildo Ferreira de Lima",
             "value": 1
         },
         {
-            "text": "Emílio Piriz Diniz Neto ",
+            "text": "Artur Gomes Mendes",
             "value": 1
         },
         {
-            "text": "Camilla Urtiga Guedes ",
+            "text": "Julia R G B Cavalcanti",
             "value": 1
         },
         {
-            "text": "João Eudes Moraes de Aguiar ",
+            "text": "Guilherme Pires Ferreira",
             "value": 1
         },
         {
-            "text": "Josenildo Ferreira de Lima ",
+            "text": "Antonio Lacerda Cavalcanti Neto",
             "value": 1
         },
         {
-            "text": "Artur Gomes Mendes ",
+            "text": "Breno Reis Machado",
             "value": 1
         },
         {
-            "text": "Julia R G B Cavalcanti ",
+            "text": "Flavio Silva Nobrega",
             "value": 1
         },
         {
-            "text": "Priscila USOT",
-            "value": 1
-        },
-        {
-            "text": "Flavio Silva Nobrega ",
-            "value": 1
-        },
-        {
-            "text": "Antonio Lacerda Cavalcanti Neto ",
-            "value": 1
-        },
-        {
-            "text": "Breno Reis Machado ",
-            "value": 1
-        },
-        {
-            "text": "Gabriel Pereira Reichert ",
-            "value": 1
-        },
-        {
-            "text": "Guilherme Pires Ferreira ",
-            "value": 1
-        },
-        {
-            "text": "Iasmin Nunes Duarte ",
+            "text": "Jamil Dieb",
             "value": 1
         },
         {
@@ -805,11 +797,15 @@
             "value": 1
         },
         {
-            "text": "Jamil Dieb ",
+            "text": "Gabriel Pereira Reichert",
             "value": 1
         },
         {
-            "text": "Ruth Maria Mendonça ",
+            "text": "Jose Lucas Formiga Dantas",
+            "value": 1
+        },
+        {
+            "text": "Priscila USOT",
             "value": 1
         },
         {
@@ -817,7 +813,7 @@
             "value": 1
         },
         {
-            "text": "Leonarda Carneiro Rocha ",
+            "text": "Ruth Maria Mendonça",
             "value": 1
         },
         {
@@ -825,7 +821,7 @@
             "value": 1
         },
         {
-            "text": "Jose Lucas Formiga Dantas ",
+            "text": "Leonarda Carneiro Rocha",
             "value": 1
         },
         {
@@ -833,11 +829,15 @@
             "value": 1
         },
         {
-            "text": "Luis Eduardo Negreiros Assunção",
+            "text": "Diego Felipe Amarantes",
             "value": 1
         },
         {
-            "text": "Diego Felipe Amarantes",
+            "text": "Iasmin Nunes Duarte",
+            "value": 1
+        },
+        {
+            "text": "Luis Eduardo Negreiros Assunção",
             "value": 1
         },
         {
@@ -845,39 +845,47 @@
             "value": 1
         },
         {
-            "text": "Raquel Fernandes dos Santos ",
+            "text": "Rayssa Raquel Araujo de Sousa",
             "value": 1
         },
         {
-            "text": "Rayssa Raquel Araujo de Sousa ",
+            "text": "Raquel Fernandes dos Santos",
             "value": 1
         },
         {
-            "text": "Joubert Serpa de Souza ",
+            "text": "Joubert Serpa de Souza",
             "value": 1
         },
         {
-            "text": "Marina de Assis Bezerra C. Leite ",
+            "text": "Marina de Assis Bezerra C. Leite",
             "value": 1
         },
         {
-            "text": "Yago Monteiro Pinheiro ",
+            "text": "Josian Ferreira da Cunha Filho",
             "value": 1
         },
         {
-            "text": "Luiz A M P Lima Lugo",
+            "text": "Jessica Vieira Peixoto",
             "value": 1
         },
         {
-            "text": "Josian Ferreira da Cunha Filho ",
+            "text": "Elder Fernandes Cruz do Nascimento Rolim",
             "value": 1
         },
         {
-            "text": "Elder Fernandes Cruz do Nascimento Rolim ",
+            "text": "Caio Jales Ramos Diniz",
             "value": 1
         },
         {
-            "text": "Elder Fernandes Cruz ",
+            "text": "Elder Fernandes Cruz",
+            "value": 1
+        },
+        {
+            "text": "Amanda S Fernandes Costa",
+            "value": 1
+        },
+        {
+            "text": "Ana Beatriz Gondim Dantas",
             "value": 1
         },
         {
@@ -885,19 +893,7 @@
             "value": 1
         },
         {
-            "text": "Amanda S Fernandes Costa ",
-            "value": 1
-        },
-        {
-            "text": "Ana Beatriz Gondim Dantas ",
-            "value": 1
-        },
-        {
-            "text": "Caio Jales Ramos Diniz ",
-            "value": 1
-        },
-        {
-            "text": "Jessica Vieira Peixoto ",
+            "text": "Luiz A M P Lima Lugo",
             "value": 1
         },
         {
@@ -905,7 +901,11 @@
             "value": 1
         },
         {
-            "text": "Maria Clara Mirande Alexandre ",
+            "text": "Yago Monteiro Pinheiro",
+            "value": 1
+        },
+        {
+            "text": "Maria Clara Mirande Alexandre",
             "value": 1
         },
         {
@@ -913,59 +913,55 @@
             "value": 1
         },
         {
-            "text": "Felizardo José Leandro Pereira ",
+            "text": "Felizardo José Leandro Pereira",
             "value": 1
         },
         {
-            "text": "Gabriel Souza Dantas Mendes Leite ",
+            "text": "Ednaldo Gomes",
             "value": 1
         },
         {
-            "text": "Ednaldo Gomes ",
+            "text": "Felipe Bezerra Andrade",
             "value": 1
         },
         {
-            "text": "Felipe Bezerra Andrade ",
+            "text": "Carlos Emanoel da Silva Gomes",
             "value": 1
         },
         {
-            "text": "Carlos Emanoel da Silva Gomes ",
+            "text": "Henrique Hamad",
             "value": 1
         },
         {
-            "text": "Henrique Hamad ",
+            "text": "João Ricardo Nascimento",
             "value": 1
         },
         {
-            "text": "Matheus Macedo",
+            "text": "Gabriel Souza Dantas Mendes Leite",
             "value": 1
         },
         {
-            "text": "João Victor Pinto de Menezes ",
+            "text": "João Victor Pinto de Menezes",
             "value": 1
         },
         {
-            "text": "João Ricardo Nascimento ",
+            "text": "Leticia de Araujo Moreira Bandeira",
             "value": 1
         },
         {
-            "text": "Leticia de Araujo Moreira Bandeira ",
+            "text": "Matheus Mendes  Santana",
             "value": 1
         },
         {
-            "text": "Matheus Mendes  Santana ",
+            "text": "Maria Eduarda de Souza Hipólito",
             "value": 1
         },
         {
-            "text": "Maria Eduarda de Souza Hipólito ",
+            "text": "Camila Marinho do Nascimento",
             "value": 1
         },
         {
-            "text": "Camila Marinho do Nascimento ",
-            "value": 1
-        },
-        {
-            "text": "Leonardo Trajano de Oliveira ",
+            "text": "Leonardo Trajano de Oliveira",
             "value": 1
         }
     ],
@@ -989,16 +985,16 @@
             "name": "Jacicarlos Lima de Alencar"
         },
         {
-            "name": "Marcelo Dantas Tavares "
+            "name": "Marcelo Dantas Tavares"
         },
         {
-            "name": "Alex Tiburtino Meira "
+            "name": "Alex Tiburtino Meira"
         },
         {
-            "name": "Ricardo Vieira Santos "
+            "name": "Ricardo Vieira Santos"
         },
         {
-            "name": "Alexandre Rolim da Paz "
+            "name": "Alexandre Rolim da Paz"
         }
     ],
     "latestDonations": [
@@ -1006,31 +1002,31 @@
             "name": "Constantino Giovanni Braga Cartaxo"
         },
         {
-            "name": "Alexandre Medeiros Figueiredo "
+            "name": "Alexandre Medeiros Figueiredo"
         },
         {
-            "name": "Juliane Dornelas Lucio "
+            "name": "Juliane Dornelas Lucio"
         },
         {
-            "name": "Beatriz Gadelha e Xavier "
+            "name": "Beatriz Gadelha e Xavier"
         },
         {
-            "name": "Taynah de Almeida Melo "
+            "name": "Taynah de Almeida Melo"
         },
         {
-            "name": "Mario Vasconcelos "
+            "name": "Mario Vasconcelos"
         },
         {
-            "name": "Lauro Pires Xavier Bisneto "
+            "name": "Lauro Pires Xavier Bisneto"
         },
         {
-            "name": "Gabriella Barreto Soares "
+            "name": "Gabriella Barreto Soares"
         },
         {
-            "name": "Rivando Rodrigues de Souza "
+            "name": "Rivando Rodrigues de Souza"
         },
         {
-            "name": "Gizzele Barcellos Damazio "
+            "name": "Gizzele Barcellos Damazio"
         }
     ]
 }
